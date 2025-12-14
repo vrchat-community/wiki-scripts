@@ -8,25 +8,25 @@
 
 */
 
-	/* 😺 toolbar theming */
-	.wikiEditor-ui-toolbar {
-		background: var(--less-dark-grey);
-	}
-	.wikiEditor-ui-toolbar .group,
-	.wikiEditor-ui-toolbar .sections .section,
-	.wikiEditor-ui .wikiEditor-ui-top,
-	.wikiEditor-ui .wikiEditor-ui-view,
-	div.editOptions {
-		border-color: var(--more-dark-grey);
-	}
-	.wikiEditor-ui-toolbar .group .label {
-		color: inherit;
-	}
-	div.editOptions {
-		background: var(--less-dark-grey);
-		color: inherit;
-	}
-	/* 😺 haha what if...... just kidding...... *unless?*
+/* 😺 toolbar theming */
+.wikiEditor-ui-toolbar {
+	background: var(--less-dark-grey);
+}
+.wikiEditor-ui-toolbar .group,
+.wikiEditor-ui-toolbar .sections .section,
+.wikiEditor-ui .wikiEditor-ui-top,
+.wikiEditor-ui .wikiEditor-ui-view,
+div.editOptions {
+	border-color: var(--more-dark-grey);
+}
+.wikiEditor-ui-toolbar .group .label {
+	color: inherit;
+}
+div.editOptions {
+	background: var(--less-dark-grey);
+	color: inherit;
+}
+/* 😺 haha what if...... just kidding...... *unless?*
 	.wikiEditor-ui-text{
 		filter: invert(1);
 	}

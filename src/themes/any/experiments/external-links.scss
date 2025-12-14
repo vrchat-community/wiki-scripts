@@ -1,0 +1,86 @@
+@use "sass:list";
+
+$origins: (
+	"x.com",
+	"twitter.com" "x.com",
+	"youtube.com",
+	"www.youtube.com" "youtube.com",
+	"youtu.be" "youtube.com",
+	"twitch.tv",
+	"www.twitch.tv" "twitch.tv",
+	"tiktok.com",
+	"www.tiktok.com" "tiktok.com",
+	"steamdb.info",
+	"steamcommunity.com",
+	"store.steampowered.com" "steamcommunity.com",
+	"discord.com",
+	"discord.gg" "discord.com",
+	"github.com" null invert(1),
+	"medium.com"
+);
+
+@each $origin
+	in (
+		"ask.vrchat.com",
+		"creators.vrchat.com",
+		"docs.vrchat.com",
+		"feedback.vrchat.com",
+		"hello.vrchat.com",
+		"help.vrchat.com",
+		"medium.com/vrchat",
+		"vrch.at",
+		"vrchat.com"
+	)
+{
+	$origins: list.append($origins, ($origin "vrchat.com"), comma);
+}
+
+.mw-parser-output a.external,
+.link-mailto,
+.link-ftp,
+.link-irc,
+.link-audio,
+.link-video,
+.link-document {
+	background: none !important;
+	padding: 0 !important;
+}
+
+@mixin external-link($icon, $filter: null) {
+	&::before {
+		content: "" !important;
+		display: inline-block !important;
+
+		width: 1.25em !important;
+		height: 1.25em !important;
+
+		margin-right: 0.5em !important;
+		transform: translateY(4.5px);
+
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: contain !important;
+		background-image: url("#{$icon}") !important;
+
+		filter: $filter !important;
+		border-radius: 0.25em;
+	}
+}
+
+a:not(.icon-none, .icon-none *) {
+	&.external {
+		@include external-link(
+			"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9Imx1Y2lkZSBsdWNpZGUtZXh0ZXJuYWwtbGluayI+PHBhdGggZD0iTTE1IDNoNnY2Ii8+PHBhdGggZD0iTTEwIDE0IDIxIDMiLz48cGF0aCBkPSJNMTggMTN2NmEyIDIgMCAwIDEtMiAySDVhMiAyIDAgMCAxLTItMlY4YTIgMiAwIDAgMSAyLTJoNiIvPjwvc3ZnPg=="
+		);
+	}
+
+	@each $origin, $origin-override, $filter in $origins {
+		&[href="https://#{$origin}"],
+		&[href^="https://#{$origin}/"] {
+			$final_origin: if($origin-override != null, $origin-override, $origin);
+			$icon: "https://icons.duckduckgo.com/ip3/#{$final_origin}.ico";
+
+			@include external-link($icon, $filter);
+		}
+	}
+}

@@ -10,115 +10,116 @@
 
 */
 
-	/* 😺 colors! :D */
-	@media screen and (min-width: 1100px) {
-		#mw-site-navigation .sidebar-chunk,
-		#mw-related-navigation .sidebar-chunk {
-			background: var(--less-dark-grey);
-			color: var(--faux-white);
-			border: solid var(--less-dark-grey-border);
-		}
+/* 😺 colors! :D */
+@media screen and (min-width: 1100px) {
+	#mw-site-navigation .sidebar-chunk,
+	#mw-related-navigation .sidebar-chunk {
+		background: var(--less-dark-grey);
+		color: var(--faux-white);
+		border: solid var(--less-dark-grey-border);
 	}
+}
 
-	/* 😺 these are kinda arbitrary */
-	.sidebar-chunk a:not(.new, .new a) {
-		color: var(--link);
+/* 😺 these are kinda arbitrary */
+.sidebar-chunk a:not(.new, .new a) {
+	color: var(--link);
+}
+
+.sidebar-chunk a:hover:not(.new, .new a) {
+	color: var(--link-hover);
+}
+
+.sidebar-chunk a:visited:not(.new, .new a) {
+	color: var(--link-visited);
+}
+
+.sidebar-chunk a:visited:hover:not(.new, .new a) {
+	color: var(--link-visited-hover);
+}
+
+/* 😺 round the corners for the sidebars a bit */
+.sidebar-chunk {
+	border-radius: 15px;
+}
+
+/* 😺 main logo */
+#p-logo {
+	display: inline;
+}
+@media screen and (max-width: 1099px) {
+	#p-logo {
+		display: none;
 	}
+}
+.mw-wiki-logo img {
+	transition: transform 0.15s ease-in-out;
+	filter: drop-shadow(0 0 2px #000);
+}
+.mw-wiki-logo img:hover {
+	transform: scale(1.08);
+}
 
-	.sidebar-chunk a:hover:not(.new, .new a) {
-		color: var(--link-hover);
+/* 😺 DROP SHADOWS MY BELOVED */
+@media screen and (min-width: 1100px) {
+	#mw-site-navigation .sidebar-chunk,
+	#mw-related-navigation .sidebar-chunk {
+		box-shadow: 0 0 0.7rem #000;
 	}
+}
 
-	.sidebar-chunk a:visited:not(.new, .new a) {
-		color: var(--link-visited);
+/* 😺 shortens the margins between sections a bit */
+@media screen and (min-width: 1100px) {
+	#mw-site-navigation .sidebar-chunk .mw-portlet-body,
+	#mw-related-navigation .sidebar-chunk .mw-portlet-body {
+		margin-bottom: 1.5em;
 	}
+}
 
-	.sidebar-chunk a:visited:hover:not(.new, .new a) {
-		color: var(--link-visited-hover);
+/* 😺 make the "related navigation" bar equal to the main nav bar (WHY WAS IT DIFFERENT) */
+#mw-related-navigation {
+	width: 14em;
+	flex: 0 0 14em;
+}
+
+/* 😺 inverts mobile menus */
+#site-navigation h2,
+#site-tools h2,
+.tools-inline .dropdown-toggle {
+	filter: invert(1);
+}
+
+/* 😺 fix mobile settings menu misalignment */
+@media screen and (max-width: 1099px) {
+	#site-tools h2 {
+		right: 4em;
 	}
+	#user-tools h2 {
+		right: 0;
+	}
+}
 
-	/* 😺 round the corners for the sidebars a bit */
-	.sidebar-chunk {
+/* 🦇 Changes mobile sidebar to match */
+@media screen and (max-width: 1099px) {
+	.sidebar-inner,
+	.dropdown {
+		background: var(--less-dark-grey);
+		color: var(--faux-white);
+		border: solid 3px var(--less-dark-grey-border);
 		border-radius: 15px;
 	}
+}
+/* 🦇 adjusts the menu cover (greys out stuff behind the sidebar) to match theming */
+@media screen and (max-width: 1099px) {
+	#menus-cover {
+		background: var(--more-dark-grey);
+		opacity: 0.75;
+	}
+}
 
-	/* 😺 main logo */
-	#p-logo {
-		display: inline;
+/* 😺 fix for mobile borders at bottom */
+@media screen and (max-width: 1099px) {
+	#mw-site-navigation .sidebar-chunk,
+	#mw-related-navigation .sidebar-chunk {
+		border: 0;
 	}
-	@media screen and (max-width: 1099px) {
-        #p-logo {
-            display: none;
-        }
-    }
-	.mw-wiki-logo img {
-		transition: transform 0.15s ease-in-out;
-		filter: drop-shadow(0 0 2px #000);
-	}
-	.mw-wiki-logo img:hover {
-		transform: scale(1.08);
-	}
-
-	/* 😺 DROP SHADOWS MY BELOVED */
-	@media screen and (min-width: 1100px) {
-		#mw-site-navigation .sidebar-chunk,
-		#mw-related-navigation .sidebar-chunk {
-			box-shadow: 0 0 0.7rem #000;
-		}
-	}
-
-	/* 😺 shortens the margins between sections a bit */
-	@media screen and (min-width: 1100px) {
-		#mw-site-navigation .sidebar-chunk .mw-portlet-body,
-		#mw-related-navigation .sidebar-chunk .mw-portlet-body {
-			margin-bottom: 1.5em;
-		}
-	}
-
-	/* 😺 make the "related navigation" bar equal to the main nav bar (WHY WAS IT DIFFERENT) */
-	#mw-related-navigation {
-		width: 14em;
-		flex: 0 0 14em;
-	}
-	
-	/* 😺 inverts mobile menus */
-	#site-navigation h2, #site-tools h2, .tools-inline .dropdown-toggle {
-		filter: invert(1);
-	}
-
-	/* 😺 fix mobile settings menu misalignment */
-	@media screen and (max-width: 1099px) {
-		#site-tools h2 {
-			right: 4em;
-		}
-		#user-tools h2 {
-			right: 0;
-		}
-	}
-
-	/* 🦇 Changes mobile sidebar to match */
-	@media screen and (max-width: 1099px) {
-		.sidebar-inner,
-		.dropdown {
-			background: var(--less-dark-grey);
-			color: var(--faux-white);
-			border: solid 3px var(--less-dark-grey-border);
-			border-radius: 15px;
-		}
-	}
-	/* 🦇 adjusts the menu cover (greys out stuff behind the sidebar) to match theming */
-	@media screen and (max-width: 1099px) {
-		#menus-cover {
-			background: var(--more-dark-grey);
-			opacity: 0.75;
-        }
-    }
-
-	/* 😺 fix for mobile borders at bottom */
-	@media screen and (max-width: 1099px) {
-		#mw-site-navigation .sidebar-chunk,
-		#mw-related-navigation .sidebar-chunk {
-			border: 0;
-		}
-	}
-
+}

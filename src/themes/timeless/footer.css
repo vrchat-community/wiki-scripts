@@ -1,52 +1,39 @@
-/*
-
-▀███▀▀▀███ ▄▄█▀▀██▄   ▄▄█▀▀██▄ ███▀▀██▀▀██████▀▀▀███▀███▀▀▀██▄
-  ██    ▀███▀    ▀██▄██▀    ▀██▄▀   ██   ▀█ ██    ▀█  ██   ▀██▄
-  ██   █ ██▀      ▀███▀      ▀██    ██      ██   █    ██   ▄██
-  ██▀▀██ ██        ███        ██    ██      ██████    ███████
-  ██   █ ██▄      ▄███▄      ▄██    ██      ██   █  ▄ ██  ██▄
-  ██     ▀██▄    ▄██▀██▄    ▄██▀    ██      ██     ▄█ ██   ▀██▄
-▄████▄     ▀▀████▀▀   ▀▀████▀▀    ▄████▄  ▄██████████████▄ ▄███▄
-
-*/
-
-	/* 😺 colors! :D */
-	.mw-footer-container {
-		border-top: solid 1px var(--less-dark-grey);
-		background: #1a1d1c;
-		/* background-image: url('https://i.imgur.com/Z2x34d3.jpeg'), linear-gradient(120deg, transparent 15%, #1a1d1c 25%);
+/* 😺 colors! :D */
+.mw-footer-container {
+	border-top: solid 1px var(--less-dark-grey);
+	background: #1a1d1c;
+	/* background-image: url('https://i.imgur.com/Z2x34d3.jpeg'), linear-gradient(120deg, transparent 15%, #1a1d1c 25%);
 		background-size: contain;
 		background-repeat: no-repeat; */
-	}
+}
 
-	/* 😺 FIGURE OUT POTENTIALLY HAVING CUSTOM IMAGES IN THE FOOTER LATER
+/* 😺 FIGURE OUT POTENTIALLY HAVING CUSTOM IMAGES IN THE FOOTER LATER
 	.mw-footer-container::after {
 		background: linear-gradient(120deg, transparent 20%, #1a1d1c 30%);
 	} */
 
-	/* 😺 center it a bit more */
-	.mw-footer {
-		max-width: 80em;
-	}
-	
-	/* 😺 not really the footer *per-se* but mobile categories theming (it's at the bottom of the page) */
-	#content-bottom-stuff {
-		background: #10171c;
-	}
-	#content-bottom-stuff a:not(.new, .new a) {
-		color: var(--link);
-	}
-	#content-bottom-stuff a:visited:not(.new, .new a) {
-		color: var(--link-visited);
-	}
+/* 😺 center it a bit more */
+.mw-footer {
+	max-width: 80em;
+}
 
-	/* 😺 fix ghost margin at bottom of page */
-	.mw-footer ul,
-	.mw-footer li {
-		margin: 0;
-		padding: .3em 0;
-	}
-	body{
-		margin: 0 !important;
-	}
+/* 😺 not really the footer *per-se* but mobile categories theming (it's at the bottom of the page) */
+#content-bottom-stuff {
+	background: #10171c;
+}
+#content-bottom-stuff a:not(.new, .new a) {
+	color: var(--link);
+}
+#content-bottom-stuff a:visited:not(.new, .new a) {
+	color: var(--link-visited);
+}
 
+/* 😺 fix ghost margin at bottom of page */
+.mw-footer ul,
+.mw-footer li {
+	margin: 0;
+	padding: 0.3em 0;
+}
+body {
+	margin: 0 !important;
+}

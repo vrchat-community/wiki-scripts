@@ -1,0 +1,73 @@
+@use "sass:color";
+@use "../colors.scss";
+
+$namespaces:
+	0 "" colors.$official,
+	1 "Talk" colors.$official,
+	2 "User" colors.$user,
+	3 "User_talk" colors.$user,
+	3000 "Community" colors.$community,
+	3001 "Community_talk" colors.$community,
+	3100 "Guides" colors.$guides,
+	3101 "Guides_talk" colors.$guides;
+
+@each $id, $label, $color in $namespaces {
+	:root {
+		--ns-#{$id}: "#{$label}";
+		--ns-#{$id}-color: #{$color};
+	}
+
+	.ns-#{$id} {
+		--ns-current: var(--ns-#{$id});
+		--ns-current-color: var(--ns-#{$id}-color);
+	}
+
+	a:not(.external) {
+		$pattern: if($label == "", "", "#{$label}:");
+
+		&[href^="/wiki/#{$pattern}"],
+		&[href^="/wiki/Special:MyLanguage/#{$pattern}"] {
+			$color: var(--ns-#{$id}-color);
+			$color-darker: color-mix(in oklab, $color, black 10%);
+
+			color: $color !important;
+
+			&:hover {
+				color: $color-darker !important;
+			}
+		}
+	}
+}
+
+.mw-first-heading {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 0.25em;
+
+	color: var(--ns-current-color) !important;
+	border-bottom: solid 4px var(--ns-current-color) !important;
+
+	.mw-page-title-separator {
+		display: none;
+	}
+
+	.mw-page-title-namespace,
+	&:not(:has(.mw-page-title-namespace))::before {
+		content: var(--ns-current);
+		color: color-mix(in oklab, var(--ns-current-color), black 10%);
+		font-size: 0.7em;
+	}
+}
+
+.tools-inline li.selected {
+	border-color: var(--ns-current-color);
+	padding-bottom: 0.25rem;
+}
+
+#ca-talk a,
+#ca-watch a,
+.tools-inline li[id^="ca-nstab-"] a {
+	background: none !important;
+	padding: 0 !important;
+	padding-bottom: 0.25rem !important;
+}

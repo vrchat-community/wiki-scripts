@@ -1,0 +1,49 @@
+/* 😺 Table, 🍷 Aries, 🐢 Prismic, 🦇 TrixxedHeart */
+
+@import url("@fontsource-variable/exo-2");
+@import url("@fontsource-variable/noto-sans");
+
+// This file has random tweaks that should probably be organized better later.
+@import url("./miscellaneous.css");
+
+@import url("./body.css");
+@import url("./editor.css");
+@import url("./footer.css");
+@import url("./header.css");
+@import url("./infobox.css");
+@import url("./mediawiki.css");
+@import url("./notifications.css");
+@import url("./source.css");
+@import url("./sidebar.css");
+@import url("./translate.css");
+
+$faux-white: #f8f9fa;
+
+:root {
+	--faux-white: #f8f9fa;
+	--blue-text: #6ae3f9;
+	--more-dark-green: #07242b;
+	--more-dark-green-border: #053c48;
+	--less-dark-green: #07343f;
+	--less-dark-green-border: #086c84;
+	--very-dark-grey: #101315;
+	--very-dark-grey-border: #232a2e;
+	--more-dark-grey: #181b1f;
+	--more-dark-grey-border: #282a2e;
+	--less-dark-grey: #252a30;
+	--less-dark-grey-border: #3c4148;
+	--link: #6bd4ff;
+	--link-hover: #468ca9;
+	--link-visited: #509fdd;
+	--link-visited-hover: #3874a3;
+	--red: #b32c2c;
+	--yellow: #ecca12;
+	--green: #34762e;
+
+	--font-header:
+		"Exo 2 Variable", "Linux Libertine", "Times New Roman", "Liberation Serif", "Nimbus Roman", "Noto Serif", "Times",
+		sans-serif;
+	--font-sans:
+		"Noto Sans Variable", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Lato", "Liberation Sans", "Helvetica Neue",
+		"Helvetica", sans-serif;
+}

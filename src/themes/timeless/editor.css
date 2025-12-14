@@ -1,277 +1,275 @@
-/*
-
-▀███▀▀▀███▀███▀▀▀██▄ ▀████▀██▀▀██▀▀███ ▄▄█▀▀██▄ ▀███▀▀▀██▄
-  ██    ▀█  ██    ▀██▄ ██ █▀   ██   ▀███▀    ▀██▄ ██   ▀██▄
-  ██   █    ██     ▀██ ██      ██    ██▀      ▀██ ██   ▄██
-  ██████    ██      ██ ██      ██    ██        ██ ███████
-  ██   █  ▄ ██     ▄██ ██      ██    ██▄      ▄██ ██  ██▄
-  ██     ▄█ ██    ▄██▀ ██      ██    ▀██▄    ▄██▀ ██   ▀██▄
-▄██████████████████▀ ▄████▄  ▄████▄    ▀▀████▀▀ ▄████▄ ▄███▄
-
-*/
-
-/*
-
-▀██▀  ▀█▀ ▀██▀  ▄█▀▀▀▄█  ▀██▀  ▀█▀     █     ▀██▀
- ▀█▄  ▄▀   ██   ██▄▄  ▀   ██    █     ███     ██
-  ██  █    ██    ▀▀███▄   ██    █    █  ██    ██
-   ███     ██  ▄     ▀██  ██    █   ▄▀▀▀▀█▄   ██
-    █     ▄██▄ █▀▄▄▄▄█▀    ▀█▄▄▀   ▄█▄  ▄██▄ ▄██▄▄▄▄▄█
-
-*/
-
-	/* 😺 colors! :D */
-	.oo-ui-toolbar-bar,
-	.oo-ui-toolbar-position-top>.oo-ui-toolbar-bar {
-		background-color: var(--less-dark-grey);
-	}
-	.oo-ui-menuToolGroup {
-		border: 0;
-	}
-	.oo-ui-popupToolGroup.oo-ui-widget-enabled>.oo-ui-popupToolGroup-handle:hover,
-	.oo-ui-tool.oo-ui-widget-enabled>.oo-ui-tool-link:hover {
-		background: #0000003d;
-	}
-	.oo-ui-toolbar-bar {
-		color: inherit;
-	}
-	.oo-ui-popupWidget-popup {
-		background: var(--more-dark-grey);
-		border: 2px solid var(--less-dark-grey);
-	}
-
-	/* 😺 fix awkward right-borders */
-	.oo-ui-toolbar-actions .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle {
-		border: 0;
-	}
-	.oo-ui-toolbar-position-top > .oo-ui-toolbar-bar {
-		border-bottom: 0;
-	}
-	
-	div.magnify a {
-  background-image: url(https://wiki-files.vrchat.com/Icons_Expand.png?20250301125603);
-  background-size: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
+/* 😺 colors! :D */
+.oo-ui-toolbar-bar,
+.oo-ui-toolbar-position-top > .oo-ui-toolbar-bar {
+	background-color: var(--less-dark-grey);
+}
+.oo-ui-menuToolGroup {
+	border: 0;
+}
+.oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:hover,
+.oo-ui-tool.oo-ui-widget-enabled > .oo-ui-tool-link:hover {
+	background: #0000003d;
+}
+.oo-ui-toolbar-bar {
+	color: inherit;
+}
+.oo-ui-popupWidget-popup {
+	background: var(--more-dark-grey);
+	border: 2px solid var(--less-dark-grey);
 }
 
-	/* 😺 invert the icons (stinky) */
-	/* .oo-ui-icon-checkAll was excluded for a non-editor issue, revert if it breaks something */
-	.oo-ui-iconElement-icon:not(.tool-active, .tool-active span, .oo-ui-icon-checkAll),
-	.oo-ui-indicator-down{
-		filter: invert(1);
-	}
+/* 😺 fix awkward right-borders */
+.oo-ui-toolbar-actions .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle {
+	border: 0;
+}
+.oo-ui-toolbar-position-top > .oo-ui-toolbar-bar {
+	border-bottom: 0;
+}
 
-	/* 😺 round the corners */
-	.mw-body .oo-ui-toolbar-bar {
-		border-radius: 15px 15px 0 0;
-	}
-	
-	/* 😺 image gallery box theming */
-	.ve-ui-mwGalleryDialog-highlighted-image {
-		background: transparent;
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
-	}
-	.ve-ui-targetWidget:not(.oo-ui-pendingElement-pending) {
-		background: var(--more-dark-grey);
-	}
-	.ve-ui-targetWidget {
-		border: 1px solid var(--less-dark-grey)
-	}
-	.ve-ui-mwGalleryDialog .ve-ui-mwGalleryDialog-image-container {
-		border: 1px solid var(--less-dark-green-border);
-	}
-	
-	/* 😺 UPLOAD BOX THEMING */
-	.oo-ui-windowManager-modal > .oo-ui-dialog > .oo-ui-window-frame,
-	.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame {
-		border: 3px solid var(--less-dark-grey);
-		background-color: var(--more-dark-grey);
-		border-radius: 16px;
-		overflow: hidden;
-	}
-	.ve-ui-mwSaveDialog-options {
-		background: var(--more-dark-grey);
-		border: 0;
-	}
-	.oo-ui-processDialog-content .oo-ui-window-head, .oo-ui-processDialog-content .oo-ui-window-foot {
-		outline: 2px dotted var(--less-dark-grey);
-	}
-	.ve-ui-mwSaveDialog-license {
-		color: var(--faux-white);
-	}
-	.oo-ui-windowManager-modal > .oo-ui-dialog {
-		background: #0008;
-	}
-	.oo-ui-messageDialog-message {
-		color: inherit;
-	}
-	/* 😺 UPLOAD BOX ERROR */
-	.oo-ui-processDialog-errors {
-		background: #0009;
-		backdrop-filter: blur(4px);
-	}
-	.oo-ui-processDialog-errors-title {
-		color: inherit;
-		background: transparent;
-	}
-	.oo-ui-messageWidget.oo-ui-messageWidget-block.oo-ui-flaggedElement-error {
-		background-color: #220000;
-		border-color: #d33;
-	}
+div.magnify a {
+	background-image: url(https://wiki-files.vrchat.com/Icons_Expand.png?20250301125603);
+	background-size: 16px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
 
-	/* 😺 THIS IS SO FUCKING CURSED */
-	figure[typeof~="mw:File/Thumb"],
-	figure[typeof~="mw:File/Thumb"] > figcaption {
-		width: auto !important; /* AAAAAAAAAAAAAAAAAAAAAAAAAAA */
-		background: var(--more-dark-green);
-		border: solid var(--less-dark-green);
-		border-top: 0;
-	}
-	figure.ve-ce-mwBlockImageNode{
-		border: solid var(--less-dark-green);
-		border-bottom: 0;
-	}
-	figure[typeof~="mw:File/Thumb"] > a:first-child > :first-child:not(.mw-broken-media) {
-		border: 0;
-	}
+/* 😺 invert the icons (stinky) */
+/* .oo-ui-icon-checkAll was excluded for a non-editor issue, revert if it breaks something */
+.oo-ui-iconElement-icon:not(.tool-active, .tool-active span, .oo-ui-icon-checkAll),
+.oo-ui-indicator-down {
+	filter: invert(1);
+}
 
-	/* 🍷 popups */
-	.mwe-popups {
-		border: solid 3px var(--less-dark-grey-border);
-		border-radius: 15px;
-		overflow: hidden;
-	}
+/* 😺 round the corners */
+.mw-body .oo-ui-toolbar-bar {
+	border-radius: 15px 15px 0 0;
+}
 
-	.mwe-popups, .mwe-popups-container, .mwe-popups .mwe-popups-extract {
-		background: var(--less-dark-grey) !important;
-		color: var(--faux-white) !important;
-	}
+/* 😺 image gallery box theming */
+.ve-ui-mwGalleryDialog-highlighted-image {
+	background: transparent;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.ve-ui-targetWidget:not(.oo-ui-pendingElement-pending) {
+	background: var(--more-dark-grey);
+}
+.ve-ui-targetWidget {
+	border: 1px solid var(--less-dark-grey);
+}
+.ve-ui-mwGalleryDialog .ve-ui-mwGalleryDialog-image-container {
+	border: 1px solid var(--less-dark-green-border);
+}
 
-	.mwe-popups .mwe-popups-extract[dir="ltr"]::after {
-		background-image: linear-gradient(to right,rgba(255,255,255,0), var(--less-dark-grey) 50%);
-	}
+/* 😺 UPLOAD BOX THEMING */
+.oo-ui-windowManager-modal > .oo-ui-dialog > .oo-ui-window-frame,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame {
+	border: 3px solid var(--less-dark-grey);
+	background-color: var(--more-dark-grey);
+	border-radius: 16px;
+	overflow: hidden;
+}
+.ve-ui-mwSaveDialog-options {
+	background: var(--more-dark-grey);
+	border: 0;
+}
+.oo-ui-processDialog-content .oo-ui-window-head,
+.oo-ui-processDialog-content .oo-ui-window-foot {
+	outline: 2px dotted var(--less-dark-grey);
+}
+.ve-ui-mwSaveDialog-license {
+	color: var(--faux-white);
+}
+.oo-ui-windowManager-modal > .oo-ui-dialog {
+	background: #0008;
+}
+.oo-ui-messageDialog-message {
+	color: inherit;
+}
+/* 😺 UPLOAD BOX ERROR */
+.oo-ui-processDialog-errors {
+	background: #0009;
+	backdrop-filter: blur(4px);
+}
+.oo-ui-processDialog-errors-title {
+	color: inherit;
+	background: transparent;
+}
+.oo-ui-messageWidget.oo-ui-messageWidget-block.oo-ui-flaggedElement-error {
+	background-color: #220000;
+	border-color: #d33;
+}
 
-	.mwe-popups-settings-icon {
-		filter: invert(1);
-	}
+/* 😺 THIS IS SO FUCKING CURSED */
+figure[typeof~="mw:File/Thumb"],
+figure[typeof~="mw:File/Thumb"] > figcaption {
+	width: auto !important; /* AAAAAAAAAAAAAAAAAAAAAAAAAAA */
+	background: var(--more-dark-green);
+	border: solid var(--less-dark-green);
+	border-top: 0;
+}
+figure.ve-ce-mwBlockImageNode {
+	border: solid var(--less-dark-green);
+	border-bottom: 0;
+}
+figure[typeof~="mw:File/Thumb"] > a:first-child > :first-child:not(.mw-broken-media) {
+	border: 0;
+}
 
-	/* 🍷 language selector */
+/* 🍷 popups */
+.mwe-popups {
+	border: solid 3px var(--less-dark-grey-border);
+	border-radius: 15px;
+	overflow: hidden;
+}
 
-	.mw-pt-languages {
-		color: unset;
-		background-color: transparent;
-		border: dotted 3px var(--more-dark-grey-border);
-		margin-bottom: 1em;
-	}
+.mwe-popups,
+.mwe-popups-container,
+.mwe-popups .mwe-popups-extract {
+	background: var(--less-dark-grey) !important;
+	color: var(--faux-white) !important;
+}
 
-	.mw-pt-languages-ui {
-		font-weight: normal;
-	}
+.mwe-popups .mwe-popups-extract[dir="ltr"]::after {
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--less-dark-grey) 50%);
+}
 
-	.mw-pt-languages-selected {
-		font-weight: bold;
-	}
+.mwe-popups-settings-icon {
+	filter: invert(1);
+}
 
-	.mw-pt-progress {
-		padding: 0;
-		background: none;
-	}
+/* 🍷 language selector */
 
-	.mw-pt-progress::after {
-		display: inline-block;
-		content: "";
-		width: .6em;
-		height: .6em;
-		border-radius: 100%;
-		margin-left: .25em;
-	}
+.mw-pt-languages {
+	color: unset;
+	background-color: transparent;
+	border: dotted 3px var(--more-dark-grey-border);
+	margin-bottom: 1em;
+}
 
-	.mw-pt-progress--complete::after {
-		background-color: var(--green);
-	}
+.mw-pt-languages-ui {
+	font-weight: normal;
+}
 
-	.mw-pt-progress--high::after {
-		background-color: #e8d222;
-	}
+.mw-pt-languages-selected {
+	font-weight: bold;
+}
 
-	.mw-pt-progress--med::after {
-		background-color: var(--yellow);
-	}
+.mw-pt-progress {
+	padding: 0;
+	background: none;
+}
 
-	.mw-pt-progress--low::after, .mw-pt-progress--stub::after {
-		background-color: var(--red);
-	}
+.mw-pt-progress::after {
+	display: inline-block;
+	content: "";
+	width: 0.6em;
+	height: 0.6em;
+	border-radius: 100%;
+	margin-left: 0.25em;
+}
 
-	.uls-menu {
-		background-color: var(--less-dark-grey);
-		border: 3px solid var(--less-dark-grey-border);
-		border-radius: 16px;
-		color: var(--faux-white);
-	}
-	.uls-search, .uls-lcd, #uls-settings-block {
-		background-color: transparent;
-	}
-	.uls-search {
-		border: none;
-	}
-	.uls-lcd-region-title {
-		color: var(--faux-white);
-	}
-	.uls-language-block a {
-		color: var(--link);
-	}
+.mw-pt-progress--complete::after {
+	background-color: var(--green);
+}
 
-	.uls-language-option--highlighted {
-		background-color: transparent !important;
-	}
+.mw-pt-progress--high::after {
+	background-color: #e8d222;
+}
 
-	ol.references li:target, sup.reference:target {
-		background-color: var(--less-dark-grey);
-	}
-	
-	/* 🦇 fixes an issue where the "Add undocumented parameter" text is hard-to-read when inserting a template. */
-	.oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button {
-	    color: var(--link); /* this little button wants to be oohhhh so special, too bad, you're blue now! */
-	}
-		.oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover {
-	    color: var(--link-hover); /* also it changes color when hovered over so gotta fix that too ig */
-	}
-	
-	/* 🦇 fixes stray white line in dialog when inserting a template */
-	.ve-ui-mwTwoPaneTransclusionDialogLayout > .oo-ui-menuLayout-menu {
-		border-right: 0px;
-	}
-	
-	/* 🦇 prevents background darken from affecting help dialogs. this is stupid. */
-	body > div.ve-ui-overlay-global.ve-ui-overlay-global-desktop.ve-ui-overlay > div > div > div.oo-ui-window-frame > div.oo-ui-window-content.oo-ui-dialog-content.oo-ui-processDialog-content.ve-ui-nodeDialog.ve-ui-mwTemplateDialog.ve-ui-mwTransclusionDialog-expanded.oo-ui-window-content-setup.oo-ui-window-content-ready > div.oo-ui-window-body > div.ve-ui-mwFloatingHelpElement.ve-ui-mwTransclusionDialog-floatingHelpElement > div > div {
-		background:none;
-	}
-	
-	/* 🦇 makes it not white when hovering over any given tab in the visual editor */
-	.oo-ui-popupToolGroup.oo-ui-popupToolGroup-active > .oo-ui-popupToolGroup-handle {
-    background-color: var(--more-dark-grey);
-	}
-	/* 🦇 make dropdowns not white, probably? */
-	.oo-ui-popupToolGroup-tools {
-		background-color: var(--less-dark-grey);
-    	border: 1px solid var(--less-dark-grey-border);
-	}
-	.oo-ui-menuToolGroup-tools .oo-ui-tool.oo-ui-tool-active {
-    background-color: var(--more-dark-grey);
-	}
-	.oo-ui-listToolGroup-tools .oo-ui-tool.oo-ui-widget-enabled:hover {
-    background-color: var(--less-dark-grey);
-	}
-	/* 🦇 fixes white parts when inserting a template */
-	.ve-ui-mwTransclusionOutlineTemplateWidget-sticky {
-    background-color: unset;
-	}
-	.ve-ui-expandableContent-fade {
-    background: linear-gradient(to right, rgb(0 0 0 / 0%) 0, #1b1f23 90%); /* why is this color hardcoded and not a variable? */
-	}
-	.ve-ui-expandableContent-toggle {
-    background-color: unset;
-	}
+.mw-pt-progress--med::after {
+	background-color: var(--yellow);
+}
+
+.mw-pt-progress--low::after,
+.mw-pt-progress--stub::after {
+	background-color: var(--red);
+}
+
+.uls-menu {
+	background-color: var(--less-dark-grey);
+	border: 3px solid var(--less-dark-grey-border);
+	border-radius: 16px;
+	color: var(--faux-white);
+}
+.uls-search,
+.uls-lcd,
+#uls-settings-block {
+	background-color: transparent;
+}
+.uls-search {
+	border: none;
+}
+.uls-lcd-region-title {
+	color: var(--faux-white);
+}
+.uls-language-block a {
+	color: var(--link);
+}
+
+.uls-language-option--highlighted {
+	background-color: transparent !important;
+}
+
+ol.references li:target,
+sup.reference:target {
+	background-color: var(--less-dark-grey);
+}
+
+/* 🦇 fixes an issue where the "Add undocumented parameter" text is hard-to-read when inserting a template. */
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button {
+	color: var(--link); /* this little button wants to be oohhhh so special, too bad, you're blue now! */
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover {
+	color: var(--link-hover); /* also it changes color when hovered over so gotta fix that too ig */
+}
+
+/* 🦇 fixes stray white line in dialog when inserting a template */
+.ve-ui-mwTwoPaneTransclusionDialogLayout > .oo-ui-menuLayout-menu {
+	border-right: 0px;
+}
+
+/* 🦇 prevents background darken from affecting help dialogs. this is stupid. */
+body
+	> div.ve-ui-overlay-global.ve-ui-overlay-global-desktop.ve-ui-overlay
+	> div
+	> div
+	> div.oo-ui-window-frame
+	> div.oo-ui-window-content.oo-ui-dialog-content.oo-ui-processDialog-content.ve-ui-nodeDialog.ve-ui-mwTemplateDialog.ve-ui-mwTransclusionDialog-expanded.oo-ui-window-content-setup.oo-ui-window-content-ready
+	> div.oo-ui-window-body
+	> div.ve-ui-mwFloatingHelpElement.ve-ui-mwTransclusionDialog-floatingHelpElement
+	> div
+	> div {
+	background: none;
+}
+
+/* 🦇 makes it not white when hovering over any given tab in the visual editor */
+.oo-ui-popupToolGroup.oo-ui-popupToolGroup-active > .oo-ui-popupToolGroup-handle {
+	background-color: var(--more-dark-grey);
+}
+/* 🦇 make dropdowns not white, probably? */
+.oo-ui-popupToolGroup-tools {
+	background-color: var(--less-dark-grey);
+	border: 1px solid var(--less-dark-grey-border);
+}
+.oo-ui-menuToolGroup-tools .oo-ui-tool.oo-ui-tool-active {
+	background-color: var(--more-dark-grey);
+}
+.oo-ui-listToolGroup-tools .oo-ui-tool.oo-ui-widget-enabled:hover {
+	background-color: var(--less-dark-grey);
+}
+/* 🦇 fixes white parts when inserting a template */
+.ve-ui-mwTransclusionOutlineTemplateWidget-sticky {
+	background-color: unset;
+}
+.ve-ui-expandableContent-fade {
+	background: linear-gradient(
+		to right,
+		rgb(0 0 0 / 0%) 0,
+		#1b1f23 90%
+	); /* why is this color hardcoded and not a variable? */
+}
+.ve-ui-expandableContent-toggle {
+	background-color: unset;
+}

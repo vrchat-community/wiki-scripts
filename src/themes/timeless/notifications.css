@@ -8,34 +8,48 @@
 
 */
 
-	/* 😺 colors */
-	.mw-echo-ui-placeholderItemWidget {
-		background: transparent;
-	}
-	.mw-echo-ui-notificationBadgeButtonPopupWidget-popup .oo-ui-popupWidget-head {
-		background: var(--very-dark-grey);
-	}
+/* 😺 colors */
+.mw-echo-ui-placeholderItemWidget {
+	background: transparent;
+}
+.mw-echo-ui-notificationBadgeButtonPopupWidget-popup .oo-ui-popupWidget-head {
+	background: var(--very-dark-grey);
+}
 
-	/* 😺 internal border theming */
-	.mw-echo-ui-notificationBadgeButtonPopupWidget-popup > .oo-ui-popupWidget-popup > .oo-ui-popupWidget-head {
-		border-bottom: 2px solid var(--more-dark-grey-border);
-	}
-	.mw-echo-ui-notificationBadgeButtonPopupWidget-popup > .oo-ui-popupWidget-popup > .oo-ui-popupWidget-footer {
-		border-top: 2px solid var(--more-dark-grey-border);
-	}
-	.mw-echo-ui-notificationBadgeButtonPopupWidget-popup > .oo-ui-popupWidget-popup > .oo-ui-popupWidget-footer .mw-echo-ui-notificationBadgeButtonPopupWidget-footer-buttons .oo-ui-buttonElement:last-child {
-		border-left: 2px solid var(--more-dark-grey-border);
-	}
-	
-	/* 😺 ahhh, the devils chevron, DEVRON- if you will. */
-	/* 😺 INVESTIGATE A SOLUTION TO THE RESIDUAL LOWER BORDER LINE LATER */
-	.mw-echo-ui-notificationBadgeButtonPopupWidget-popup.oo-ui-popupWidget-anchored-top .oo-ui-popupWidget-anchor::after, .mw-echo-ui-notificationBadgeButtonPopupWidget-popup.oo-ui-popupWidget-anchored-top .oo-ui-popupWidget-anchor::before {
-		border-bottom-color: var(--very-dark-grey);
-	}
-	
-	/* 😺 PENDING LOADING BAR; PULLED FROM MW'S SOURCE CODE, DON'T ASK ME WHY IT'S LIKE THIS */
-	.oo-ui-pendingElement-pending {
-		background-color: var(--very-dark-grey);
-		background-image: linear-gradient(135deg, var(--very-dark-grey-border) 25%, transparent 25%, transparent 50%, var(--very-dark-grey-border) 50%, var(--very-dark-grey-border) 75%, transparent 75%, transparent);
-		animation: oo-ui-pendingElement-stripes 650ms linear infinite; /* 😺 unchanged from stock, just leaving here in case we want to change the timing values later */
-	}
+/* 😺 internal border theming */
+.mw-echo-ui-notificationBadgeButtonPopupWidget-popup > .oo-ui-popupWidget-popup > .oo-ui-popupWidget-head {
+	border-bottom: 2px solid var(--more-dark-grey-border);
+}
+.mw-echo-ui-notificationBadgeButtonPopupWidget-popup > .oo-ui-popupWidget-popup > .oo-ui-popupWidget-footer {
+	border-top: 2px solid var(--more-dark-grey-border);
+}
+.mw-echo-ui-notificationBadgeButtonPopupWidget-popup
+	> .oo-ui-popupWidget-popup
+	> .oo-ui-popupWidget-footer
+	.mw-echo-ui-notificationBadgeButtonPopupWidget-footer-buttons
+	.oo-ui-buttonElement:last-child {
+	border-left: 2px solid var(--more-dark-grey-border);
+}
+
+/* 😺 ahhh, the devils chevron, DEVRON- if you will. */
+/* 😺 INVESTIGATE A SOLUTION TO THE RESIDUAL LOWER BORDER LINE LATER */
+.mw-echo-ui-notificationBadgeButtonPopupWidget-popup.oo-ui-popupWidget-anchored-top .oo-ui-popupWidget-anchor::after,
+.mw-echo-ui-notificationBadgeButtonPopupWidget-popup.oo-ui-popupWidget-anchored-top .oo-ui-popupWidget-anchor::before {
+	border-bottom-color: var(--very-dark-grey);
+}
+
+/* 😺 PENDING LOADING BAR; PULLED FROM MW'S SOURCE CODE, DON'T ASK ME WHY IT'S LIKE THIS */
+.oo-ui-pendingElement-pending {
+	background-color: var(--very-dark-grey);
+	background-image: linear-gradient(
+		135deg,
+		var(--very-dark-grey-border) 25%,
+		transparent 25%,
+		transparent 50%,
+		var(--very-dark-grey-border) 50%,
+		var(--very-dark-grey-border) 75%,
+		transparent 75%,
+		transparent
+	);
+	animation: oo-ui-pendingElement-stripes 650ms linear infinite; /* 😺 unchanged from stock, just leaving here in case we want to change the timing values later */
+}

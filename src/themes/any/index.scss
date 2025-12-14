@@ -1,0 +1,135 @@
+@import url("./main-page.scss");
+@import url("./pettable.scss");
+
+@import url("./experiments/external-links.scss");
+@import url("./experiments/namespace-colors.scss");
+
+#localNotice {
+	background: var(--less-dark-grey);
+	border: 3px solid var(--less-dark-grey-border);
+	border-radius: 12px;
+}
+
+.wikitable.navbox {
+	width: 100%;
+	text-align: center;
+}
+
+.hlist ul {
+	margin: 0;
+}
+
+.hlist li {
+	display: inline;
+}
+
+.hlist li::before {
+	content: " · ";
+	font-weight: bold;
+	margin: 0 0.25em 0 0.3em;
+}
+
+.hlist li:first-child::before {
+	content: none;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.3);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.mw-gallery-traditional .gallerybox > .thumb::before {
+	content: unset;
+}
+
+#mw-content-text > div > ul > li {
+	padding-top: unset !important;
+}
+
+.mw-body li.gallerybox div.thumb {
+	height: auto !important;
+	overflow: hidden;
+}
+
+li.gallerybox div.thumb img {
+	width: 100%;
+}
+
+.mw-gallery-traditional .gallerybox > .thumb > * {
+	display: block;
+}
+
+figure[typeof~="mw:File/Thumb"] > :not(figcaption) .mw-file-element,
+figure[typeof~="mw:File/Frame"] > :not(figcaption) .mw-file-element {
+	margin: 0;
+}
+
+.mw-body-content figure[typeof~="mw:File/Thumb"] > a,
+.mw-body-content figure[typeof~="mw:File/Frame"] > a {
+	background: var(--less-dark-grey);
+	border: solid var(--less-dark-grey-border);
+	border-radius: 10px;
+	padding: 0;
+	min-width: 256px;
+	max-width: 384px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+figure[typeof~="mw:File/Thumb"],
+figure[typeof~="mw:File/Thumb"] > figcaption {
+	border: none !important;
+	background: none !important;
+}
+
+figure[typeof~="mw:File/Thumb"] > figcaption {
+	padding: 0.5em;
+}
+
+@media screen and (max-width: 1099px) {
+	.desktop-only {
+		display: none !important;
+	}
+}
+
+@media screen and (min-width: 1100px) {
+	.mobile-only {
+		display: none !important;
+	}
+}
+
+[data-ooui*="Real name"] {
+	pointer-events: none;
+	display: none;
+}
+
+.reflist-upper-alpha ol {
+	list-style-type: upper-alpha;
+}
+
+.reflist-upper-roman ol {
+	list-style-type: upper-roman;
+}
+
+.reflist-lower-alpha ol {
+	list-style-type: lower-alpha;
+}
+
+.reflist-lower-roman ol {
+	list-style-type: lower-roman;
+}
+
+@media screen and (min-height: 600px) {
+	.tux-messagetable-header {
+		background: transparent;
+	}
+}

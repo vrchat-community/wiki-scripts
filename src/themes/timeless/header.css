@@ -1,149 +1,139 @@
-/*
+/* 😺 fundamental layout adjustments */
+#mw-header-container {
+	position: relative;
+	padding-top: 5em;
+}
 
-▀████▀  ▀████▀▀███▀▀▀███      ██     ▀███▀▀▀██▄ ▀███▀▀▀███▀███▀▀▀██▄
-  ██      ██    ██    ▀█     ▄██▄      ██    ▀██▄ ██    ▀█  ██   ▀██▄
-  ██      ██    ██   █      ▄█▀██▄     ██     ▀██ ██   █    ██   ▄██
-  ██████████    ██████     ▄█  ▀██     ██      ██ ██████    ███████
-  ██      ██    ██   █  ▄  ████████    ██     ▄██ ██   █  ▄ ██  ██▄
-  ██      ██    ██     ▄█ █▀      ██   ██    ▄██▀ ██     ▄█ ██   ▀██▄
-▄████▄  ▄████▄▄█████████████▄   ▄████▄████████▀ ▄██████████████▄ ▄███▄
+#mw-header {
+	max-width: 115em;
+	justify-content: right;
+}
 
-*/
+/* 😺 colors! :D */
+#mw-header-container,
+#mw-header-hack .color-middle,
+#mw-header-hack .color-left,
+#mw-header-hack .color-right {
+	background: transparent;
+}
 
-	/* 😺 fundamental layout adjustments */
-	#mw-header-container {
-		position: relative;
-		padding-top: 5em;
-	}
+#mw-header-hack {
+	box-shadow: 0 0;
+}
 
-	#mw-header {
-		max-width: 115em;
-		justify-content: right;
-	}
+#mw-header-container {
+	color: #fff;
+}
 
-	/* 😺 colors! :D */
-	#mw-header-container,
-	#mw-header-hack .color-middle,
-	#mw-header-hack .color-left,
-	#mw-header-hack .color-right {
-		background: transparent;
-	}
+/* 😺 title text removal */
+#p-logo-text {
+	display: none;
+}
 
-	#mw-header-hack {
-		box-shadow: 0 0;
-	}
+/* 😺 searchbar theming and adjustments */
+#simpleSearch {
+	background: var(--less-dark-grey);
+	border: solid 2px #39404a;
+}
 
-	#mw-header-container {
-		color: #fff;
-	}
+#searchInput {
+	color: #fff;
+}
 
-	/* 😺 title text removal */
-	#p-logo-text {
-		display: none;
-	}
+#p-search {
+	flex: 0 1 auto;
+	padding-right: 1em;
+}
 
-	/* 😺 searchbar theming and adjustments */
-	#simpleSearch {
-		background: var(--less-dark-grey);
-		border: solid 2px #39404a;
-	}
+#p-search input:focus {
+	outline: none;
+}
 
-	#searchInput {
-		color: #fff;
-	}
+#searchInput::placeholder {
+	opacity: 0.8;
+	font-weight: 500;
+}
 
-	#p-search {
-		flex: 0 1 auto;
-		padding-right: 1em;
-	}
+input#searchButton,
+#mw-searchButton {
+	filter: invert(1);
+	right: 0.5em;
+}
 
-	#p-search input:focus {
-		outline: none;
-	}
-
-	#searchInput::placeholder {
-		opacity: .8;
-		font-weight: 500;
-	}
-
-	input#searchButton, #mw-searchButton {
-		filter: invert(1);
-		right: 0.5em;
-	}
-
-	/* 😺 account box theming and adjustments */
-	@media screen and (min-width: 1100px) {
-		#user-tools {
-			background: var(--less-dark-grey);
-			border-radius: 8px;
-			border: solid 3px #39404a;
-			box-shadow: 0 0 0.4rem #000;
-			transition: background-color 0.1s ease-in-out;
-		}
-		#user-tools:has(.dropdown-active) {
-			background: #16191c;
-			border: solid 2px #24282e;
-		}
-	}
-	
-	/* 😺 [sobbing] [throwing up] */
-	#personal h2, #personal h2 span, #pt-notifications-alert, #pt-notifications-notice {
-		filter: invert(1);
-	}
-
-	/* 😺 account box adjustments */
+/* 😺 account box theming and adjustments */
+@media screen and (min-width: 1100px) {
 	#user-tools {
-		width: 12.5em; /* 😺 magic number, NO IDEA why it has to be different from the column below it to *kinda* match it in width, investigate later */
-		min-width: 0;
-		display: flex;
-		justify-content: center;
+		background: var(--less-dark-grey);
+		border-radius: 8px;
+		border: solid 3px #39404a;
+		box-shadow: 0 0 0.4rem #000;
+		transition: background-color 0.1s ease-in-out;
 	}
-	
-	/* 🦇 very very bad fix for the user tools overflow, i'm hoping this fix will piss someone enough who knows how to do it properly */
-	@media screen and (min-width: 1100px) {
-		#user-tools h2 {
-			top: 0.15em;
-			margin-left: 0.4em;
-			background-image: none;
-			position: relative;
-		}
-			#personal-extra {
-			top: 0.15em;
-			float: left;
-			left: -25px;
-			position: relative;
-			transform: scale(0.85); /* 🦇 NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE */
-		}
+	#user-tools:has(.dropdown-active) {
+		background: #16191c;
+		border: solid 2px #24282e;
 	}
+}
 
-	/* 😺 account name fix */
-	#personal {
-		padding: 0;
-	}
-	#personal h2 {
-		padding: .25em 0 0 1.5em; /* 😺 magic numbers */
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
+/* 😺 [sobbing] [throwing up] */
+#personal h2,
+#personal h2 span,
+#pt-notifications-alert,
+#pt-notifications-notice {
+	filter: invert(1);
+}
 
-	/* 😺 dropdown theming */
-	#personal .dropdown {
-		background: var(--very-dark-grey);
-		border: solid var(--very-dark-grey-border);
-	}
-	#pt-uls .uls-trigger::before {
-		filter: invert(1);
-	}
+/* 😺 account box adjustments */
+#user-tools {
+	width: 12.5em; /* 😺 magic number, NO IDEA why it has to be different from the column below it to *kinda* match it in width, investigate later */
+	min-width: 0;
+	display: flex;
+	justify-content: center;
+}
 
-	/* 😺 I HATE CHEVRONS MADE LIKE THIS */
-	#personal .dropdown:before {
-		border-bottom: 10px solid transparent;
+/* 🦇 very very bad fix for the user tools overflow, i'm hoping this fix will piss someone enough who knows how to do it properly */
+@media screen and (min-width: 1100px) {
+	#user-tools h2 {
+		top: 0.15em;
+		margin-left: 0.4em;
+		background-image: none;
+		position: relative;
 	}
-
-	#personal .dropdown::after {
-		border-bottom-color: #252e34;
-		top: -10px;
+	#personal-extra {
+		top: 0.15em;
+		float: left;
+		left: -25px;
+		position: relative;
+		transform: scale(0.85); /* 🦇 NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE */
 	}
-	
+}
 
+/* 😺 account name fix */
+#personal {
+	padding: 0;
+}
+#personal h2 {
+	padding: 0.25em 0 0 1.5em; /* 😺 magic numbers */
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* 😺 dropdown theming */
+#personal .dropdown {
+	background: var(--very-dark-grey);
+	border: solid var(--very-dark-grey-border);
+}
+#pt-uls .uls-trigger::before {
+	filter: invert(1);
+}
+
+/* 😺 I HATE CHEVRONS MADE LIKE THIS */
+#personal .dropdown:before {
+	border-bottom: 10px solid transparent;
+}
+
+#personal .dropdown::after {
+	border-bottom-color: #252e34;
+	top: -10px;
+}

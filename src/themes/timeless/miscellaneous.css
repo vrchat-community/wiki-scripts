@@ -1,0 +1,103 @@
+/* 🍷 remove this eventually: https://files.aries.fyi/2024/10/03/004f7ed28ed6ccde.png*/
+.tux-groupselector {
+	color: black;
+}
+
+/* 🍷 https://files.aries.fyi/2024/10/06/aa0941e69e581768.png */
+.oo-ui-labelWidget.oo-ui-inline-help {
+	color: var(--faux-white);
+	opacity: 0.75;
+}
+
+/* 😺 establish faux white text globally */
+body {
+	color: var(--faux-white);
+}
+
+/* 😺 main BG, INVESTIGATE SCALING AND POSSIBLY DITHERING THE GRADIENT */
+body {
+	background: #10171c;
+	background-image: url("https://wiki-files.vrchat.com/SiteBackground.webp");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+#mw-wrapper {
+	background:
+		linear-gradient(to bottom, #10171c00 20vh, #10171c 55vh),
+		linear-gradient(to right, #10171c 1vw, #10171c00 15vw, #10171c00 85vw, #10171c 99vw);
+}
+
+/* 😺 ugly serif fonts BEGONE */
+.mw-body h1,
+.mw-body h2,
+.mw-body h3,
+.mw-body h4,
+.mw-body h5,
+.mw-body h6,
+.mw-body dt,
+#personal h2 {
+	font-family: var(--font-header);
+	font-weight: 600;
+}
+.mw-body h2 {
+	border-bottom: solid 3px var(--more-dark-grey-border);
+}
+
+/* 😺 below seems to be 🍷's code; haven't studied it enough to know where it should go or what parts *exactly* it touches so for now I'll just leave this notice here until more thorough comments are written */
+.mw-sp-translate-message-documentation {
+	background-color: transparent;
+}
+.mw-sp-translate-edit-fields fieldset {
+	border: 3px solid var(--more-dark-grey-border);
+	border-radius: 8px;
+}
+.mw-sp-translate-edit-definition {
+	background-color: transparent;
+}
+
+hr {
+	border-color: var(--less-dark-grey-border);
+}
+
+body {
+	font-family: var(--font-sans);
+	font-weight: 400;
+}
+
+.mw-message-box {
+	background-color: transparent !important;
+	border: dotted 3px var(--less-dark-grey-border);
+	color: var(--faux-white);
+	padding: 1.5em;
+}
+
+.mw-message-box p {
+	margin: 0;
+}
+
+.mw-logevent-loglines {
+	margin-bottom: 1em !important;
+}
+
+.mw-message-box-warning {
+	border-color: var(--yellow);
+}
+
+.mw-message-box-error {
+	border-color: var(--red);
+}
+
+div.mw-warning-with-logexcerpt {
+	padding: 1.5em;
+	border: dotted 3px var(--less-dark-grey-border);
+	margin-bottom: 1em;
+}
+
+span.comment {
+	opacity: 0.75;
+}
+#contentSub {
+	color: var(--faux-white);
+}

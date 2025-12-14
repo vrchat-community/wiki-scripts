@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import cleanCss from "vite-plugin-clean-css";
 
 export default defineConfig({
 	resolve: {
@@ -8,11 +9,12 @@ export default defineConfig({
 		target: "es2015",
 		assetsDir: "",
 		modulePreload: false,
+		cssTarget: "chrome88",
 		minify: false,
 		rolldownOptions: {
 			input: {
 				"MediaWiki:Common": "./src",
-				"MediaWiki:Timeless": "./src/themes/timeless/index.css",
+				"MediaWiki:Timeless": "./src/themes/timeless/index.scss"
 			},
 			output: {
 				format: "cjs",
@@ -39,6 +41,19 @@ export default defineConfig({
 			}
 		}
 	},
+	plugins: [
+		cleanCss({
+			level: {
+				1: {
+					all: true
+				},
+				2: {
+					all: true,
+				}
+			},
+			format: "beautify"
+		})
+	],
 	experimental: {
 		// We bundle fonts, but haven't uploaded them yet.
 		renderBuiltUrl: (filename) => {

@@ -1,0 +1,131 @@
+[class*=" page-Main_Page"] {
+	#firstHeading {
+		display: none;
+	}
+	.mw-editsection {
+		display: none;
+	}
+
+	.mw-body .mw-parser-output h2 {
+		margin: 0.9em 0.7em 0;
+		padding: 0;
+	}
+
+	.mw-body .mw-parser-output h2:after {
+		border-bottom: 0;
+	}
+
+	.mw-body .mw-parser-output h2:after {
+		border-bottom: 0;
+	}
+
+	.mw-body .mw-parser-output h3 {
+		margin: 0 0.3em 0.3em;
+		padding: 0;
+	}
+
+	.qm-icon:before {
+		display: inline-block;
+		content: "";
+		background-size: 0.85em;
+		width: 0.85em;
+		height: 0.85em;
+		margin-right: 0.4em;
+		position: relative;
+		top: 0.1em;
+	}
+
+	@media screen and (max-width: 600px) {
+		[class*=" page-Main_Page"] .mw-body .mw-parser-output h3 {
+			margin: 0 0 0.3em;
+			font-size: 1.4em;
+		}
+
+		.qm-icon:before {
+			background-size: 0.75em;
+			width: 0.75em;
+			height: 0.75em;
+		}
+	}
+
+	.qm-icon.version:before {
+		background-image: url("https://wiki-files.vrchat.com/Icons_PinFPS_25.png");
+	}
+	.qm-icon.news:before {
+		background-image: url("https://wiki-files.vrchat.com/Icons_Announcement_25.png");
+	}
+	.qm-icon.basics:before {
+		background-image: url("https://wiki-files.vrchat.com/Icons_LaunchPad_25.png");
+	}
+	.qm-icon.social:before {
+		background-image: url("https://wiki-files.vrchat.com/Icons_Social_25.png");
+	}
+	.qm-icon.economy:before {
+		background-image: url("https://wiki-files.vrchat.com/Icons_VRCPlus_25.png");
+	}
+	.qm-icon.worlds:before {
+		background-image: url("https://wiki-files.vrchat.com/Icons_Worlds_25.png");
+	}
+	.qm-icon.avatars:before {
+		background-image: url("https://wiki-files.vrchat.com/Icons_Avatars_25.png");
+	}
+	.qm-icon.creation:before {
+		background-image: url("https://wiki-files.vrchat.com/Icons_CommunityLabs_25.png");
+	}
+	.qm-icon.help:before {
+		background-image: url("https://wiki-files.vrchat.com/Icons_HelpInfo_25.png");
+	}
+	.qm-icon.community:before {
+		background-image: url("https://wiki-files.vrchat.com/Icons_Favorite_25.png");
+	}
+
+	.qm-container {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		column-gap: 1.5em;
+		row-gap: 1.5em;
+		margin: 0.75em 0 1.5em;
+	}
+
+	.qm-box {
+		flex: 1 1 15%;
+		min-width: 180px;
+		padding: 1.5em;
+		font-size: 1em;
+		background-color: #171e28;
+		background-color: rgba(50, 90, 120, 0.1);
+		border: 3px solid #102f5b;
+		border: 3px solid rgba(20, 70, 140, 0.5);
+		border-radius: 1em;
+	}
+
+	.qm-box.community {
+		background-color: #1a251c;
+		background-color: rgba(40, 140, 40, 0.1);
+		border-color: #1a4c24;
+		border-color: rgba(40, 120, 40, 0.5);
+	}
+
+	.qm-box.flex {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		column-gap: 0.75em;
+		row-gap: 0.75em;
+		min-width: inherit;
+		max-width: inherit;
+	}
+
+	@media screen and (max-width: 600px) {
+		.qm-container {
+			column-gap: 0.75em;
+			row-gap: 0.75em;
+		}
+
+		.qm-box {
+			min-width: 120px;
+			padding: 0.75em;
+		}
+	}
+}

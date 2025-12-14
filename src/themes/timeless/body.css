@@ -1,300 +1,296 @@
-/*
-
-▀███▀▀▀██▄ ▄▄█▀▀██▄ ▀███▀▀▀██▄ ▀███▀   ▀██▀
-  ██    ████▀    ▀██▄ ██    ▀██▄ ███   ▄█
-  ██    ███▀      ▀██ ██     ▀██  ███ ▄█
-  ██▀▀▀█▄▄█        ██ ██      ██   ████
-  ██    ▀██▄      ▄██ ██     ▄██    ██
-  ██    ▄███▄    ▄██▀ ██    ▄██▀    ██
-▄████████  ▀▀████▀▀ ▄████████▀    ▄████▄
-
-*/
-
-	/* 😺 ....🍷??????? */
-	@media screen {
-		a.new, .new a {
-			color: var(--red);
-		}
+/* 😺 ....🍷??????? */
+@media screen {
+	a.new,
+	.new a {
+		color: var(--red);
 	}
-	
-	.mw-body .mw-parser-output h1::after, .mw-body .mw-parser-output h2::after {
-		display: none;
-	}
-	
-	#mw-site-navigation .sidebar-chunk h3 {
-border: none;
+}
+
+.mw-body .mw-parser-output h1::after,
+.mw-body .mw-parser-output h2::after {
+	display: none;
+}
+
+#mw-site-navigation .sidebar-chunk h3 {
+	border: none;
 }
 
 #mw-related-navigation .sidebar-chunk h3 {
-border: none;
+	border: none;
 }
 
-#mw-site-navigation .sidebar-chunk, #mw-related-navigation .sidebar-chunk {
-padding: 1.25em;
-padding-bottom: 0;
+#mw-site-navigation .sidebar-chunk,
+#mw-related-navigation .sidebar-chunk {
+	padding: 1.25em;
+	padding-bottom: 0;
 }
 
 .mw-body .toctitle {
-border: none;
+	border: none;
 }
 .toctogglelabel {
-color: var(--link);
+	color: var(--link);
 }
 
-ul#filetoc, .toc, .toccolours, .mw-warning {
-padding: 1.25rem;
+ul#filetoc,
+.toc,
+.toccolours,
+.mw-warning {
+	padding: 1.25rem;
 }
 
-	/* 😺 shift the upper margins to be tighter with the header */
-	@media screen and (min-width: 1100px) {
-		#mw-content-container {
-			margin-top: 2.5em;
-		}
-	}
-
-	/* 😺 colors! :D */
+/* 😺 shift the upper margins to be tighter with the header */
+@media screen and (min-width: 1100px) {
 	#mw-content-container {
-		background: transparent;
+		margin-top: 2.5em;
 	}
+}
 
+/* 😺 colors! :D */
+#mw-content-container {
+	background: transparent;
+}
+
+#mw-content {
+	background: var(--more-dark-grey);
+	color: var(--faux-white);
+	border: solid var(--more-dark-grey-border);
+}
+
+/* 😺 these are kinda arbitrary */
+#mw-content a:not(.new, .new a),
+.oo-ui-layout a {
+	color: var(--link);
+}
+
+#mw-content a:hover:not(.new, .new a),
+.oo-ui-layout a:hover {
+	color: var(--link-hover);
+}
+
+#mw-content a:visited:not(.new, .new a),
+.oo-ui-layout a:visited {
+	color: var(--link-visited);
+}
+
+#mw-content a:visited:hover:not(.new, .new a),
+.oo-ui-layout a:visited:hover {
+	color: var(--link-visited-hover);
+}
+
+/* 😺 CURSED icon inversion, I'm fucking INSANE */
+#p-namespaces a,
+#p-namespaces a span,
+#p-views a,
+#p-views a span,
+.mw-editsection,
+.mw-editsection a {
+	filter: invert(1);
+}
+/* 😺 [LOUD SCREAMING] */
+.mw-helplink {
+	color: #942b00 !important;
+	filter: invert(1);
+}
+
+/* 😺 roundin' the corners! (subject to change) */
+@media screen and (min-width: 1100px) {
 	#mw-content {
-		background: var(--more-dark-grey);
-		color: var(--faux-white);
-		border: solid var(--more-dark-grey-border);
-	}
-
-	/* 😺 these are kinda arbitrary */
-	#mw-content a:not(.new, .new a), .oo-ui-layout a {
-		color: var(--link);
-	}
-
-	#mw-content a:hover:not(.new, .new a), .oo-ui-layout a:hover {
-		color: var(--link-hover);
-	}
-
-	#mw-content a:visited:not(.new, .new a), .oo-ui-layout a:visited {
-		color: var(--link-visited);
-	}
-
-	#mw-content a:visited:hover:not(.new, .new a), .oo-ui-layout a:visited:hover {
-		color: var(--link-visited-hover);
-	}
-
-	/* 😺 CURSED icon inversion, I'm fucking INSANE */
-	#p-namespaces a,
-	#p-namespaces a span,
-	#p-views a,
-	#p-views a span,
-	.mw-editsection,
-	.mw-editsection a {
-		filter: invert(1);
-	}
-	/* 😺 [LOUD SCREAMING] */
-	.mw-helplink {
-		color: #942b00 !important;
-		filter: invert(1);
-	}
-
-	/* 😺 roundin' the corners! (subject to change) */
-	@media screen and (min-width: 1100px) {
-		#mw-content {
-			border-radius: 15px;
-		}
-	}
-
-	/* 😺 vertically aligning the top of the body content box with the sidebars */
-	@media screen and (min-width: 1100px) {
-		#mw-content-wrapper {
-			padding: 1em 0 0;
-		}
-	}
-
-	/* 😺 DROP SHADOWS MY BELOVED */
-	#mw-content {
-		box-shadow: 0 0 0.7rem #000;
-	}
-
-	/* 😺 move page titles post-namespace a *bit* to the right in order to space 'em better */
-	.mw-page-title-separator {
-		margin-right: 0.25em;
-	}
-
-	/* 😺 general TOC theming */
-	ul#filetoc,
-	.toc,
-	.toccolours,
-	.mw-warning {
-		background: var(--less-dark-grey);
-		border: 3px solid var(--less-dark-grey-border);
-		box-shadow: 0 0 4px #000;
 		border-radius: 15px;
 	}
+}
 
-	/* 😺 general content thumbnail theming */
+/* 😺 vertically aligning the top of the body content box with the sidebars */
+@media screen and (min-width: 1100px) {
+	#mw-content-wrapper {
+		padding: 1em 0 0;
+	}
+}
+
+/* 😺 DROP SHADOWS MY BELOVED */
+#mw-content {
+	box-shadow: 0 0 0.7rem #000;
+}
+
+/* 😺 move page titles post-namespace a *bit* to the right in order to space 'em better */
+.mw-page-title-separator {
+	margin-right: 0.25em;
+}
+
+/* 😺 general TOC theming */
+ul#filetoc,
+.toc,
+.toccolours,
+.mw-warning {
+	background: var(--less-dark-grey);
+	border: 3px solid var(--less-dark-grey-border);
+	box-shadow: 0 0 4px #000;
+	border-radius: 15px;
+}
+
+/* 😺 general content thumbnail theming */
+.thumbinner {
+	background: var(--less-dark-grey);
+	border: solid var(--less-dark-grey-border);
+	border-radius: 10px;
+	padding: 0;
+	min-width: 256px;
+	max-width: 384px;
+}
+
+.thumbcaption {
+	padding: 1em;
+}
+
+.thumbimage {
+	width: 100%;
+	display: flex;
+	margin: 0;
+}
+
+/* 🦇 margin-left/right unset to prevent image embeds from centering by default on large screens when text wrapping is disabled (why is this default on timeless???) */
+@media screen and (min-width: 1099px) {
 	.thumbinner {
-		background: var(--less-dark-grey);
-		border: solid  var(--less-dark-grey-border);
-		border-radius: 10px;
-		padding: 0;
-		min-width: 256px;
-		max-width: 384px;
+		margin-left: unset;
+		margin-right: unset;
 	}
+}
+.thumbinner .thumbimage,
+.thumbborder {
+	border: 0;
+	/* box-shadow: 0 0 0.1rem #000; 🦇 making the executive decision to gut this because it makes transparent images look weird */
+}
+.thumb:not(.gallerybox div.thumb) {
+	filter: drop-shadow(0 0 6px #000);
+}
 
-    .thumbcaption {
-        padding: 1em;
-    }
-    
-    .thumbimage {
-        width: 100%;
-        display: flex;
-        margin: 0;
-    }
-	
-	/* 🦇 margin-left/right unset to prevent image embeds from centering by default on large screens when text wrapping is disabled (why is this default on timeless???) */
-	@media screen and (min-width: 1099px)  {
-			.thumbinner {
-			margin-left: unset;
-			margin-right: unset;
-		}
-	}
-	.thumbinner .thumbimage,
-	.thumbborder {
-		border: 0;
-		/* box-shadow: 0 0 0.1rem #000; 🦇 making the executive decision to gut this because it makes transparent images look weird */
-	}
-	.thumb:not(.gallerybox div.thumb) {
-		filter: drop-shadow(0 0 6px #000);
-	}
+/* 😺 gallery theming */
+.mw-body li.gallerybox div.thumb {
+	background-color: var(--less-dark-grey);
+	border: solid var(--less-dark-grey-border);
+	border-radius: 10px;
+}
+ul.gallery,
+.mw-body li.gallerybox div.thumb {
+	margin: 0;
+}
+.gallerybox {
+	margin: 0.25em;
+	filter: drop-shadow(0 0 4px #000);
+}
 
-	/* 😺 gallery theming */
-	.mw-body li.gallerybox div.thumb {
-		background-color: var(--less-dark-grey);
-		border: solid  var(--less-dark-grey-border);
-		border-radius: 10px;
-	}
-	ul.gallery, .mw-body li.gallerybox div.thumb {
-		margin: 0;
-	}
-	.gallerybox {
-		margin: 0.25em;
-		filter: drop-shadow(0 0 4px #000);
-	}
+/* 😺 code block theming */
+code {
+	background: var(--less-dark-grey);
+	border: 1px solid var(--more-dark-grey);
+	color: var(--faux-white);
+}
+pre:not(.mw-highlight pre) {
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.25);
+	border: none;
+	border-radius: 16px;
+}
+.mw-highlight {
+	background: var(--less-dark-grey);
+}
 
-	/* 😺 code block theming */
-	code {
-		background: var(--less-dark-grey);
-		border: 1px solid var(--more-dark-grey);
-		color: var(--faux-white);
-	}
-	pre:not(.mw-highlight pre) {
-		color: #fff;
-		background-color: rgba(0, 0, 0, 0.25);
-		border: none;
-		border-radius: 16px;
-	}
-	.mw-highlight {
-		background: var(--less-dark-grey);
-	}
+/* 😺 table theming; COLORS ARE ARBITRARY */
+.wikitable,
+.mw-datatable {
+	color: #fff;
+}
+.wikitable,
+.wikitable > * > tr > th,
+.mw-datatable th {
+	background: #17181d;
+}
+.wikitable tr,
+.mw-datatable tr td,
+.mw-datatable tr:hover td {
+	background: #2d3135;
+}
+.wikitable tr:nth-child(2n),
+.mw-datatable tr:nth-child(2n) td,
+.mw-datatable tr:nth-child(2n) td:hover {
+	background: #212428;
+}
 
-	/* 😺 table theming; COLORS ARE ARBITRARY */
-	.wikitable,
-	.mw-datatable {
-		color: #fff;
-	}
-	.wikitable,
-	.wikitable > * > tr > th,
-	.mw-datatable th {
-		background: #17181d;
-	}
-	.wikitable tr,
-	.mw-datatable tr td,
-	.mw-datatable tr:hover td {
-		background: #2d3135;
-	}
-	.wikitable tr:nth-child(2n),
-	.mw-datatable tr:nth-child(2n) td,
-	.mw-datatable tr:nth-child(2n) td:hover {
-		background: #212428;
-	}
+.wikitable,
+.wikitable > * > tr > th,
+.wikitable > * > tr > td,
+.mw-datatable,
+.mw-datatable > * > tr > th,
+.mw-datatable > * > tr > td {
+	border: 2px solid #414b57;
+}
 
-	.wikitable,
-	.wikitable > * > tr > th,
-	.wikitable > * > tr > td,
-	.mw-datatable,
-	.mw-datatable > * > tr > th,
-	.mw-datatable > * > tr > td {
-		border: 2px solid #414b57;
-	}
+/* 😺 table multi-line cell text margin fix */
+.wikitable p {
+	margin: 0;
+}
 
-	/* 😺 table multi-line cell text margin fix */
-	.wikitable p{
-		margin: 0;
-	}
+/* 😺 revision history theming fixes */
+#pagehistory li.selected {
+	background: #2d3135;
+	color: var(--faux-white);
+	outline: 1px dashed #6e7d8f;
+}
+.updatedmarker {
+	background: transparent;
+	color: #b7f430;
+	font-weight: 700;
+}
 
-	/* 😺 revision history theming fixes */
-	#pagehistory li.selected{
-		background: #2d3135;
-		color: var(--faux-white);
-		outline: 1px dashed #6e7d8f;
-	}
-	.updatedmarker {
-		background: transparent;
-		color: #b7f430;
-		font-weight: 700;
-	}
+/* 😺 diffs theming */
+.diff-context {
+	background: var(--less-dark-grey);
+	border-color: #41474c;
+	color: inherit;
+}
+.diff-addedline {
+	border-color: var(--green);
+}
+.diff-addedline .diffchange {
+	background: var(--green);
+}
+.diff-deletedline {
+	border-color: var(--red);
+}
+.diff-deletedline .diffchange {
+	background: var(--red);
+}
 
-	/* 😺 diffs theming */
-	.diff-context {
-		background: var(--less-dark-grey);
-		border-color: #41474c;
-		color: inherit;
+/* 😺 FIRST CELL MAIN PAGE INLINE */
+@media screen and (max-width: 1099px) {
+	#first-cell {
+		display: inline;
 	}
-	.diff-addedline {
-		border-color: var(--green);
+}
+@media screen and (min-width: 1100px) {
+	#first-cell {
+		display: flex;
 	}
-	.diff-addedline .diffchange {
-		background: var(--green);
-	}
-	.diff-deletedline {
-		border-color: var(--red);
-	}
-	.diff-deletedline .diffchange {
-		background: var(--red);
-	}
+}
 
-	/* 😺 FIRST CELL MAIN PAGE INLINE */
-	@media screen and (max-width: 1099px) {
-		#first-cell{
-			display: inline;
-		}
-	}
-	@media screen and (min-width: 1100px) {
-		#first-cell{
-			display: flex;
-		}
-	}
+/* 🐢 fixes the unreadable white text on bright yellow background default */
+.not-patrolled {
+	background-color: #282a1a;
+}
 
-	/* 🐢 fixes the unreadable white text on bright yellow background default */
-	.not-patrolled {
-		background-color: #282a1a;
+/* 🐢 center titlebox text on mobile */
+@media screen and (max-width: 1099px) {
+	.mw-headline,
+	.mw-headline-sub {
+		text-align: center;
 	}
-
-	/* 🐢 center titlebox text on mobile */
-	@media screen and (max-width: 1099px) {
-		.mw-headline,
-		.mw-headline-sub {
-			text-align: center;
-		}
-	}
-	/* 🦇 Wasn't sure which section to put this in. 
+}
+/* 🦇 Wasn't sure which section to put this in.
 	Adjusts bullet point lists within page contents to have slightly more seperation for better readability.
 	this does not and should not affect other types of lists and if it does please fix it*/
-	#mw-content-text > div > ul > li {
-		padding-top: 0.35em;
-	}
-	#mw-content-text > div > ul > li:nth-child(1) {
-		padding-top: unset; /* 🦇 Removes padding from the first bullet point in a list to maintain expected behavior and unnecessary padding where there shouldn't be. */
-	}
-
-
-
+#mw-content-text > div > ul > li {
+	padding-top: 0.35em;
+}
+#mw-content-text > div > ul > li:nth-child(1) {
+	padding-top: unset; /* 🦇 Removes padding from the first bullet point in a list to maintain expected behavior and unnecessary padding where there shouldn't be. */
+}

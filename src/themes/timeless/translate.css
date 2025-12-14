@@ -10,269 +10,278 @@
 
 /* 🍷 */
 .mw-pt-translate-header {
-		border-bottom: none;
-	}
+	border-bottom: none;
+}
 
-	.mw-translate-fuzzy {
-		background-color: #ff72cf36;
-		color: unset;
-		border: none;
-	}
-	
-	.mw-translate-fuzzy > :first-child {
-		margin-top: 0 !important;
-	}
-	
-	.mw-translate-fuzzy > :last-child {
-		margin-bottom: 0 !important;
-	}
+.mw-translate-fuzzy {
+	background-color: #ff72cf36;
+	color: unset;
+	border: none;
+}
 
-	.ext-translate-container .tux-messagelist .tux-message-pagemode {
-		background:transparent;
-	}
+.mw-translate-fuzzy > :first-child {
+	margin-top: 0 !important;
+}
 
-	.ext-translate-container .tux-messagelist .tux-message-pagemode .tux-message-item-compact {
-		background:transparent;
-		border: 3px dotted var(--more-dark-grey-border);
-		border-top: none;
-		max-width: 100%;
-	}
+.mw-translate-fuzzy > :last-child {
+	margin-bottom: 0 !important;
+}
 
-	.ext-translate-container .tux-messagelist .tux-message-pagemode:first-child .tux-message-item-compact {
-		border-top:3px dotted var(--more-dark-grey-border);
-	}
+.ext-translate-container .tux-messagelist .tux-message-pagemode {
+	background: transparent;
+}
 
-	.ext-translate-container .tux-messagelist .tux-message-pagemode .tux-message-item-compact:hover {
-		background: var(--more-dark-grey-border);
-	}
+.ext-translate-container .tux-messagelist .tux-message-pagemode .tux-message-item-compact {
+	background: transparent;
+	border: 3px dotted var(--more-dark-grey-border);
+	border-top: none;
+	max-width: 100%;
+}
 
-	.tux-messagelist .tux-message-pagemode .tux-pagemode-source {
-		color:var(--faux-white);
-	}
+.ext-translate-container .tux-messagelist .tux-message-pagemode:first-child .tux-message-item-compact {
+	border-top: 3px dotted var(--more-dark-grey-border);
+}
 
-	.tux-messagelist .tux-message-pagemode .tux-pagemode-translation {
-		color:var(--faux-white);
-	}
+.ext-translate-container .tux-messagelist .tux-message-pagemode .tux-message-item-compact:hover {
+	background: var(--more-dark-grey-border);
+}
 
-	.tux-messagelist {
-		background-color:transparent;
-		color:var(--faux-white);
-	}
+.tux-messagelist .tux-message-pagemode .tux-pagemode-source {
+	color: var(--faux-white);
+}
 
-	.tux-action-bar {
-		background-color:transparent;
-		color:var(--faux-white);
-		box-shadow:none;
-	}
+.tux-messagelist .tux-message-pagemode .tux-pagemode-translation {
+	color: var(--faux-white);
+}
 
-	.tux-action-bar button {
-		background-image: none;
-	}
+.tux-messagelist {
+	background-color: transparent;
+	color: var(--faux-white);
+}
 
-	.tux-messagetable-header {
-		border-bottom:3px solid var(--more-dark-grey-border);
-	}
+.tux-action-bar {
+	background-color: transparent;
+	color: var(--faux-white);
+	box-shadow: none;
+}
 
-	.tux-message-selector li.selected {
-		border-bottom: 3px solid #36c;
-		margin-bottom: -2px;
-	}
+.tux-action-bar button {
+	background-image: none;
+}
 
-	.tux-statsbar .tux-statsbar-info {
-		color: var(--faux-white);
-	}
+.tux-messagetable-header {
+	border-bottom: 3px solid var(--more-dark-grey-border);
+}
 
-	.tux-editor-header {
-		color: unset;
-	}
-	.tux-breadcrumb {
-		color: unset;
-	}
+.tux-message-selector li.selected {
+	border-bottom: 3px solid #36c;
+	margin-bottom: -2px;
+}
 
-	.tux-breadcrumb__item--aggregate {
-		color: var(--link);
-	}
+.tux-statsbar .tux-statsbar-info {
+	color: var(--faux-white);
+}
 
-	/* 😺 translate editor floating bars */
-	.tux-messagetable-header.floating {
-		background: var(--very-dark-grey);
-	}
-	.tux-message-selector .more ul {
-		background: var(--very-dark-grey);
-		border: 2px solid var(--very-dark-grey-border);
-	}
-	.tux-message-selector label {
-		color: var(--faux-white);
-	}
-	.tux-message-filter-box, .tux-message-filter-box:focus-visible {
-		border: 2px solid var(--very-dark-grey-border);
-		outline: none;
-		color: var(--faux-white);
-	}
-	.tux-action-bar.floating {
-		background: var(--very-dark-grey);
-		border-top: 3px solid var(--more-dark-grey-border);
-	}
+.tux-editor-header {
+	color: unset;
+}
+.tux-breadcrumb {
+	color: unset;
+}
 
-	/* 😺 loading bar */
-	.tux-messagetable-loader {
-		background: transparent;
-		box-shadow: none;
-		color: var(--faux-white);
-	}
+.tux-breadcrumb__item--aggregate {
+	color: var(--link);
+}
 
+/* 😺 translate editor floating bars */
+.tux-messagetable-header.floating {
+	background: var(--very-dark-grey);
+}
+.tux-message-selector .more ul {
+	background: var(--very-dark-grey);
+	border: 2px solid var(--very-dark-grey-border);
+}
+.tux-message-selector label {
+	color: var(--faux-white);
+}
+.tux-message-filter-box,
+.tux-message-filter-box:focus-visible {
+	border: 2px solid var(--very-dark-grey-border);
+	outline: none;
+	color: var(--faux-white);
+}
+.tux-action-bar.floating {
+	background: var(--very-dark-grey);
+	border-top: 3px solid var(--more-dark-grey-border);
+}
 
-	/* 😺 lang selection button */
-	.ext-translate-language-selector .mw-ui-button {
-		background: var(--very-dark-grey);
-		border: 1px solid var(--very-dark-grey-border);
-		color: var(--faux-white);
-	}
-	.ext-translate-language-selector .ext-translate-language-icon, .ext-translate-language-selector .ext-translate-language-selector-expand {
-		filter: invert(1);
-	}
-	.mw-ui-button:not(:disabled):hover {
-		background: var(--more-dark-grey);
-		border: 1px solid var(--more-dark-grey-border);
-		color: var(--faux-white);
-	}
+/* 😺 loading bar */
+.tux-messagetable-loader {
+	background: transparent;
+	box-shadow: none;
+	color: var(--faux-white);
+}
 
-	/* 😺 lang selection search popup */
-	.uls-no-results-found-title, .uls-menu .uls-no-results-view h3, .uls-no-found-more {
-		color: var(--faux-white);
-	}
-	.uls-search-label {
-		filter: invert(1);
-	}
-	.uls-menu .uls-no-results-view .uls-no-found-more, #uls-settings-block:not(.uls-settings-block--vector-2022) {
-		background: transparent;
-		border-top: 0;
-	}
+/* 😺 lang selection button */
+.ext-translate-language-selector .mw-ui-button {
+	background: var(--very-dark-grey);
+	border: 1px solid var(--very-dark-grey-border);
+	color: var(--faux-white);
+}
+.ext-translate-language-selector .ext-translate-language-icon,
+.ext-translate-language-selector .ext-translate-language-selector-expand {
+	filter: invert(1);
+}
+.mw-ui-button:not(:disabled):hover {
+	background: var(--more-dark-grey);
+	border: 1px solid var(--more-dark-grey-border);
+	color: var(--faux-white);
+}
 
-	/* 😺 VIEW SELECTOR */
-	.tux-action-bar button {
-		background-color: var(--very-dark-grey);
-		border: 2px solid var(--very-dark-grey-border);
-		color: var(--faux-white);
-	}
-	.tux-action-bar button:hover {
-		background: var(--more-dark-grey);
-	}
-	.tux-action-bar button.down {
-		background: var(--less-dark-grey);
-	}
-	.tux-action-bar .translate-mode-button:not(.down)::before, .tux-action-bar .page-mode-button:not(.down)::before, .tux-action-bar .proofread-mode-button:not(.down)::before {
-		filter: invert(1);
-	}
+/* 😺 lang selection search popup */
+.uls-no-results-found-title,
+.uls-menu .uls-no-results-view h3,
+.uls-no-found-more {
+	color: var(--faux-white);
+}
+.uls-search-label {
+	filter: invert(1);
+}
+.uls-menu .uls-no-results-view .uls-no-found-more,
+#uls-settings-block:not(.uls-settings-block--vector-2022) {
+	background: transparent;
+	border-top: 0;
+}
 
-	/* 😺 LIST VIEW - PLAY WITH THIS MORE LATER */
-	.tux-message-item {
-		background: var(--red);
-		border-bottom: 2px solid var(--very-dark-grey);
-	}
-	.tux-message-item:hover {
-		background: #882121;
-	}
-	.tux-message-item.proofread {
-		background: var(--yellow);
-		color: #000;
-	}
-	.tux-message-item.proofread:hover {
-		background: #bca111;
-	}
-	.tux-message-item.translated {
-		background: var(--green);
-	}
-	.tux-message-item.translated:hover {
-		background: #245220;
-	}
-	.tux-list-status .tux-notice {
-		background-color: transparent;
-	}
+/* 😺 VIEW SELECTOR */
+.tux-action-bar button {
+	background-color: var(--very-dark-grey);
+	border: 2px solid var(--very-dark-grey-border);
+	color: var(--faux-white);
+}
+.tux-action-bar button:hover {
+	background: var(--more-dark-grey);
+}
+.tux-action-bar button.down {
+	background: var(--less-dark-grey);
+}
+.tux-action-bar .translate-mode-button:not(.down)::before,
+.tux-action-bar .page-mode-button:not(.down)::before,
+.tux-action-bar .proofread-mode-button:not(.down)::before {
+	filter: invert(1);
+}
 
-	/* 😺 REVIEW VIEW */
-	.ext-translate-container .tux-messagelist .tux-message-proofread {
-		background: transparent;
-	}
-	.ext-translate-container .tux-messagelist .tux-message-proofread .tux-message-item-compact:hover {
-		background: #252a30aa;
-	}
-	.ext-translate-container .tux-messagelist .tux-message-proofread .tux-message-item-compact {
-		background: var(--less-dark-grey);
-		border-bottom: 2px solid var(--less-dark-grey-border);
-		border-left: 2px solid var(--less-dark-grey-border);
-		border-right: 2px solid var(--less-dark-grey-border);
-	}
-	.ext-translate-container .tux-messagelist .tux-message-proofread:first-child .tux-message-item-compact {
-		border-top: 2px solid var(--less-dark-grey-border);
-	}
-	.ext-translate-container .tux-messagelist .tux-message-proofread:last-child .tux-message-item-compact {
-		border-bottom: 2px solid var(--less-dark-grey-border);
-	}
-	.tux-messagelist .tux-message-proofread .tux-proofread-source {
-		color: var(--faux-white);
-	}
-	.tux-messagelist .tux-message-proofread .tux-proofread-translation {
-		color: #98eb9b;
-	}
+/* 😺 LIST VIEW - PLAY WITH THIS MORE LATER */
+.tux-message-item {
+	background: var(--red);
+	border-bottom: 2px solid var(--very-dark-grey);
+}
+.tux-message-item:hover {
+	background: #882121;
+}
+.tux-message-item.proofread {
+	background: var(--yellow);
+	color: #000;
+}
+.tux-message-item.proofread:hover {
+	background: #bca111;
+}
+.tux-message-item.translated {
+	background: var(--green);
+}
+.tux-message-item.translated:hover {
+	background: #245220;
+}
+.tux-list-status .tux-notice {
+	background-color: transparent;
+}
 
-	/* 😺 SECTION EDITOR */
-	.grid .row .tux-message-editor {
-		margin: 0 auto;
-	}
-	.tux-message-editor, .grid .tux-message-editor .messagekey {
-		color: var(--faux-white);
-	}
-	.tux-message-editor .editcolumn {
-		background: var(--more-dark-grey);
-	}
-	.grid .tux-message-editor .infocolumn-block {
-		background: var(--less-dark-grey);
-	}
-	.tux-message-editor {
-		border: 2px solid var(--less-dark-grey-border);
-	}
-	.tux-message-editor .editcolumn {
-		border-right: 2px solid var(--less-dark-grey-border)
-	}
-	.tux-message-editor__caret::before, .tux-message-editor__caret::after {
-		border-right-color: var(--less-dark-grey-border)
-	}
-	.tux-message-editor textarea {
-		outline: none;
-	}
-	.tm-suggestion {
-		background: var(--very-dark-grey);
-		border: 2px solid var(--less-dark-grey-border);
-	}
-	.tux-dropdown-menu {
-		background: var(--less-dark-grey);
-		border: 2px solid var(--less-dark-grey-border);
-	}
-	.tux-message-tools-menu li a:hover {
-		background: var(--more-dark-grey);
-	}
-	.tux-message-editor .editor-expand, .tux-message-editor .editor-contract, .tux-message-editor .close {
-		filter: invert(1);
-	}
-	.tux-editor-control-buttons .mw-ui-button.mw-ui-quiet {
-		background: var(--less-dark-grey);
-		color: var(--faux-white);
-	}
-	.tux-editor-control-buttons .mw-ui-button.mw-ui-quiet:hover {
-		background: var(--very-dark-grey);
-	}
-	.tux-notice {
-		background-color: var(--very-dark-grey);
-	}
+/* 😺 REVIEW VIEW */
+.ext-translate-container .tux-messagelist .tux-message-proofread {
+	background: transparent;
+}
+.ext-translate-container .tux-messagelist .tux-message-proofread .tux-message-item-compact:hover {
+	background: #252a30aa;
+}
+.ext-translate-container .tux-messagelist .tux-message-proofread .tux-message-item-compact {
+	background: var(--less-dark-grey);
+	border-bottom: 2px solid var(--less-dark-grey-border);
+	border-left: 2px solid var(--less-dark-grey-border);
+	border-right: 2px solid var(--less-dark-grey-border);
+}
+.ext-translate-container .tux-messagelist .tux-message-proofread:first-child .tux-message-item-compact {
+	border-top: 2px solid var(--less-dark-grey-border);
+}
+.ext-translate-container .tux-messagelist .tux-message-proofread:last-child .tux-message-item-compact {
+	border-bottom: 2px solid var(--less-dark-grey-border);
+}
+.tux-messagelist .tux-message-proofread .tux-proofread-source {
+	color: var(--faux-white);
+}
+.tux-messagelist .tux-message-proofread .tux-proofread-translation {
+	color: #98eb9b;
+}
 
-	/* 😺 page view bottom border fix */
-	.ext-translate-container .tux-messagelist .tux-message-pagemode:last-child .tux-message-item-compact {
-		border-bottom: 3px dotted var(--more-dark-grey-border);
-	}
-	
-	/* 🍷 temp fix for https://wiki.vrchat.com/index.php?title=Special:LanguageStats&language=ja&group=!additions */
-	.statstable {
-		color: black;
-	}
+/* 😺 SECTION EDITOR */
+.grid .row .tux-message-editor {
+	margin: 0 auto;
+}
+.tux-message-editor,
+.grid .tux-message-editor .messagekey {
+	color: var(--faux-white);
+}
+.tux-message-editor .editcolumn {
+	background: var(--more-dark-grey);
+}
+.grid .tux-message-editor .infocolumn-block {
+	background: var(--less-dark-grey);
+}
+.tux-message-editor {
+	border: 2px solid var(--less-dark-grey-border);
+}
+.tux-message-editor .editcolumn {
+	border-right: 2px solid var(--less-dark-grey-border);
+}
+.tux-message-editor__caret::before,
+.tux-message-editor__caret::after {
+	border-right-color: var(--less-dark-grey-border);
+}
+.tux-message-editor textarea {
+	outline: none;
+}
+.tm-suggestion {
+	background: var(--very-dark-grey);
+	border: 2px solid var(--less-dark-grey-border);
+}
+.tux-dropdown-menu {
+	background: var(--less-dark-grey);
+	border: 2px solid var(--less-dark-grey-border);
+}
+.tux-message-tools-menu li a:hover {
+	background: var(--more-dark-grey);
+}
+.tux-message-editor .editor-expand,
+.tux-message-editor .editor-contract,
+.tux-message-editor .close {
+	filter: invert(1);
+}
+.tux-editor-control-buttons .mw-ui-button.mw-ui-quiet {
+	background: var(--less-dark-grey);
+	color: var(--faux-white);
+}
+.tux-editor-control-buttons .mw-ui-button.mw-ui-quiet:hover {
+	background: var(--very-dark-grey);
+}
+.tux-notice {
+	background-color: var(--very-dark-grey);
+}
 
+/* 😺 page view bottom border fix */
+.ext-translate-container .tux-messagelist .tux-message-pagemode:last-child .tux-message-item-compact {
+	border-bottom: 3px dotted var(--more-dark-grey-border);
+}
+
+/* 🍷 temp fix for https://wiki.vrchat.com/index.php?title=Special:LanguageStats&language=ja&group=!additions */
+.statstable {
+	color: black;
+}
