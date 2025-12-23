@@ -40,7 +40,7 @@ $namespaces:
 }
 
 .mw-first-heading {
-	display: flex;
+	display: flex !important;
 	flex-direction: column;
 	padding-bottom: 0.25em;
 
@@ -64,6 +64,7 @@ $namespaces:
 	padding-bottom: 0.25rem;
 }
 
+/*
 #ca-talk a,
 #ca-watch a,
 .tools-inline li[id^="ca-nstab-"] a {
@@ -71,3 +72,4 @@ $namespaces:
 	padding: 0 !important;
 	padding-bottom: 0.25rem !important;
 }
+*/

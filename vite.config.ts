@@ -49,6 +49,7 @@ export default defineConfig({
 				},
 				2: {
 					all: true,
+					removeUnusedAtRules: false
 				}
 			},
 			format: "beautify"

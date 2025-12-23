@@ -16,7 +16,9 @@ $origins: (
 	"discord.com",
 	"discord.gg" "discord.com",
 	"github.com" null invert(1),
-	"medium.com"
+	"medium.com",
+	"archive.org",
+	"web.archive.org" "archive.org"
 );
 
 @each $origin
@@ -28,6 +30,7 @@ $origins: (
 		"hello.vrchat.com",
 		"help.vrchat.com",
 		"medium.com/vrchat",
+		"medium.com/@vrchat",
 		"vrch.at",
 		"vrchat.com"
 	)
