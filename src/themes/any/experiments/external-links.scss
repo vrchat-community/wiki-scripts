@@ -1,24 +1,25 @@
 @use "sass:list";
+@use "../utilities.scss" as *;
 
 $origins: (
-	"x.com",
-	"twitter.com" "x.com",
-	"youtube.com",
-	"www.youtube.com" "youtube.com",
-	"youtu.be" "youtube.com",
-	"twitch.tv",
-	"www.twitch.tv" "twitch.tv",
-	"tiktok.com",
-	"www.tiktok.com" "tiktok.com",
-	"steamdb.info",
-	"steamcommunity.com",
-	"store.steampowered.com" "steamcommunity.com",
-	"discord.com",
-	"discord.gg" "discord.com",
-	"github.com" null invert(1),
-	"medium.com",
-	"archive.org",
-	"web.archive.org" "archive.org"
+	"x.com" "X",
+	"twitter.com" "X",
+	"youtube.com" "YouTube",
+	"www.youtube.com" "YouTube",
+	"youtu.be" "YouTube",
+	"twitch.tv" "Twitch",
+	"www.twitch.tv" "Twitch",
+	"tiktok.com" "TikTok",
+	"www.tiktok.com" "TikTok",
+	// "steamdb.info" "SteamDB",
+	"steamcommunity.com" "Steam",
+	"store.steampowered.com" "Steam",
+	"discord.com" "Discord",
+	"discord.gg" "Discord",
+	"github.com" "GitHub",
+	"medium.com" "Medium",
+	"archive.org" "Archive",
+	"web.archive.org" "Archive"
 );
 
 @each $origin
@@ -35,7 +36,7 @@ $origins: (
 		"vrchat.com"
 	)
 {
-	$origins: list.append($origins, ($origin "vrchat.com"), comma);
+	$origins: list.append($origins, ($origin "VRChat"), comma);
 }
 
 .mw-parser-output a.external,
@@ -49,7 +50,7 @@ $origins: (
 	padding: 0 !important;
 }
 
-@mixin external-link($icon, $filter: null) {
+@mixin external-link($icon-name, $filter: null) {
 	&::before {
 		content: "" !important;
 		display: inline-block !important;
@@ -63,7 +64,7 @@ $origins: (
 		background-position: center !important;
 		background-repeat: no-repeat !important;
 		background-size: contain !important;
-		background-image: url("#{$icon}") !important;
+		background-image: url(local-file($icon-name)) !important;
 
 		filter: $filter !important;
 		border-radius: 0.25em;
@@ -77,13 +78,11 @@ a:not(.icon-none, .icon-none *, .plainlinks *) {
 		);
 	}
 
-	@each $origin, $origin-override, $filter in $origins {
+	@each $origin, $icon-name, $filter in $origins {
 		&[href="https://#{$origin}"],
 		&[href^="https://#{$origin}/"] {
-			$final_origin: if($origin-override != null, $origin-override, $origin);
-			$icon: "https://icons.duckduckgo.com/ip3/#{$final_origin}.ico";
-
-			@include external-link($icon, $filter);
+			$filename: "Favicon_#{$icon-name}.webp";
+			@include external-link($filename, $filter);
 		}
 	}
 }

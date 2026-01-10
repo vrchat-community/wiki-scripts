@@ -1,0 +1,3 @@
+@function local-file($filename) {
+	@return "https://wiki-files.vrchat.com/#{$filename}";
+}
