@@ -4,12 +4,12 @@
 $namespaces:
 	0 "" colors.$official,
 	1 "Talk" colors.$official,
-	2 "User" colors.$user,
-	3 "User_talk" colors.$user,
+	2 "User" colors.$community,
+	3 "User_talk" colors.$community,
 	3000 "Community" colors.$community,
 	3001 "Community_talk" colors.$community,
-	3100 "Guides" colors.$guides,
-	3101 "Guides_talk" colors.$guides;
+	3100 "Guides" colors.$community,
+	3101 "Guides_talk" colors.$community;
 
 @each $id, $label, $color in $namespaces {
 	:root {
