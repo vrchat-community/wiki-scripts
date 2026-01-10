@@ -1,7 +1,6 @@
 import { isPage } from "~/page";
 
 import "./spoiler";
-import "./youtube";
 
 if (isPage(["Template:MainPageInfopush", "Main_Page"]))
 	mw.loader
