@@ -50,7 +50,7 @@ $origins: (
 	padding: 0 !important;
 }
 
-@mixin external-link($icon-name, $filter: null) {
+@mixin external-link($icon-url, $filter: null) {
 	&::before {
 		content: "" !important;
 		display: inline-block !important;
@@ -64,14 +64,14 @@ $origins: (
 		background-position: center !important;
 		background-repeat: no-repeat !important;
 		background-size: contain !important;
-		background-image: url(local-file($icon-name)) !important;
+		background-image: url($icon-url) !important;
 
 		filter: $filter !important;
 		border-radius: 0.25em;
 	}
 }
 
-a:not(.icon-none, .icon-none *, .plainlinks *) {
+a:not(.icon-none, .code-link, .icon-none *, .plainlinks *) {
 	&.external {
 		@include external-link(
 			"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9Imx1Y2lkZSBsdWNpZGUtZXh0ZXJuYWwtbGluayI+PHBhdGggZD0iTTE1IDNoNnY2Ii8+PHBhdGggZD0iTTEwIDE0IDIxIDMiLz48cGF0aCBkPSJNMTggMTN2NmEyIDIgMCAwIDEtMiAySDVhMiAyIDAgMCAxLTItMlY4YTIgMiAwIDAgMSAyLTJoNiIvPjwvc3ZnPg=="
@@ -81,7 +81,7 @@ a:not(.icon-none, .icon-none *, .plainlinks *) {
 	@each $origin, $icon-name, $filter in $origins {
 		&[href="https://#{$origin}"],
 		&[href^="https://#{$origin}/"] {
-			$filename: "Favicon_#{$icon-name}.webp";
+			$filename: local-file("Favicon_#{$icon-name}.webp");
 			@include external-link($filename, $filter);
 		}
 	}
