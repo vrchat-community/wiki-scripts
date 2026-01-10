@@ -1,5 +1,24 @@
+import path from "node:path";
+import { cwd } from "node:process";
+
 import { defineConfig } from "vite";
 import cleanCss from "vite-plugin-clean-css";
+
+function jsBanner(sourcePath: string) {
+	return `/** @license
+ * This file is auto-generated. Do not edit directly.
+ * @see https://github.com/vrchat-community/wiki-scripts/blob/main/${sourcePath}
+ */
+`;
+}
+
+function cssBanner(sourcePath: string) {
+	return `/*!
+ * This file is auto-generated. Do not edit directly.
+ * https://github.com/vrchat-community/wiki-scripts/blob/main/${sourcePath}
+ */
+`;
+}
 
 export default defineConfig({
 	resolve: {
@@ -37,7 +56,8 @@ export default defineConfig({
 				// MediaWiki doesn't isolate scripts, every declared variable is global.
 				// https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 				intro: "(()=>{",
-				outro: "})()"
+				outro: "})()",
+				banner: ({ facadeModuleId }) => jsBanner(path.relative(cwd(), facadeModuleId ?? ""))
 			}
 		}
 	},
@@ -53,7 +73,20 @@ export default defineConfig({
 				}
 			},
 			format: "beautify"
-		})
+		}),
+		{
+			name: "css-banner",
+			enforce: "post",
+			generateBundle(_, bundle) {
+				for (const [fileName, asset] of Object.entries(bundle)) {
+					if (asset.type !== "asset" || !fileName.endsWith(".css"))
+						continue;
+
+					const sourcePath = path.relative(cwd(), asset.originalFileNames[0] ?? "");
+					asset.source = cssBanner(sourcePath) + asset.source;
+				}
+			}
+		}
 	],
 	experimental: {
 		// Font files were uploaded separately.
