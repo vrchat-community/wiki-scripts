@@ -56,13 +56,13 @@ export default defineConfig({
 		})
 	],
 	experimental: {
-		// We bundle fonts, but haven't uploaded them yet.
+		// Font files were uploaded separately.
 		renderBuiltUrl: (filename) => {
 			if (filename.startsWith("exo-2"))
-				return `https://cdn.jsdelivr.net/npm/@fontsource-variable/exo-2/files/${filename}`;
+				return `https://wiki-files.vrchat.com/fonts/${filename}`;
 
 			if (filename.startsWith("noto-sans"))
-				return `https://cdn.jsdelivr.net/npm/@fontsource-variable/noto-sans/files/${filename}`;
+				return `https://wiki-files.vrchat.com/fonts/${filename}`;
 		}
 	}
 });
