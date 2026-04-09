@@ -294,3 +294,8 @@ pre:not(.mw-highlight pre) {
 #mw-content-text > div > ul > li:nth-child(1) {
 	padding-top: unset; /* 🦇 Removes padding from the first bullet point in a list to maintain expected behavior and unnecessary padding where there shouldn't be. */
 }
+
+/*! ⏸️ fix white background when zoomed in */
+#mw-content-block {
+	background-color: rgba(0, 0, 0, 0);
+}

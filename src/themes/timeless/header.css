@@ -32,12 +32,15 @@
 
 /* 😺 searchbar theming and adjustments */
 #simpleSearch {
-	background: var(--less-dark-grey);
-	border: solid 2px #39404a;
+	border: 3px solid #39404a;
+	border-radius: 8px;
+	height: 38px;
+	box-shadow: 0 0 0.4rem #000;
 }
 
 #searchInput {
 	color: #fff;
+	height: 2.3em;
 }
 
 #p-search {
@@ -58,6 +61,7 @@ input#searchButton,
 #mw-searchButton {
 	filter: invert(1);
 	right: 0.5em;
+	height: 3em;
 }
 
 /* 😺 account box theming and adjustments */

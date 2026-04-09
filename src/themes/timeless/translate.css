@@ -285,3 +285,8 @@
 .statstable {
 	color: black;
 }
+
+/*! ⏸️ | hack, add margin to bottom of source translate notice */
+.translate-edit-documentation {
+	margin-bottom: 1em;
+}
