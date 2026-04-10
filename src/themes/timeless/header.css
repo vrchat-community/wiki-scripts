@@ -125,8 +125,9 @@ input#searchButton,
 
 /* 😺 dropdown theming */
 #personal .dropdown {
-	background: var(--very-dark-grey);
+	background: #16191c;
 	border: solid var(--very-dark-grey-border);
+	border-radius: 8px;
 }
 #pt-uls .uls-trigger::before {
 	filter: invert(1);
@@ -140,4 +141,12 @@ input#searchButton,
 #personal .dropdown::after {
 	border-bottom-color: #252e34;
 	top: -10px;
+}
+
+/* ⏸️ hacky | center dropdown under account name */
+@media screen and (min-width: 1100px) {
+	#personal .dropdown {
+		top: 3em;
+		right: -5em;
+	}
 }
