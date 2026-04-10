@@ -338,3 +338,8 @@
 	background: var(--very-dark-grey);
 	border-color: var(--very-dark-grey-border);
 }
+
+/* ⏸️ notice noti background fix */
+.mw-echo-ui-notificationItemWidget-initiallyUnseen {
+	background-color: #382f00 !important;
+}
