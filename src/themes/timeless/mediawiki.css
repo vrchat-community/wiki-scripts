@@ -260,7 +260,7 @@
 	border-radius: 15px;
 }
 .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined {
-	background-color: rgba(0, 0, 0, 0);
+	background-color: transparent;
 }
 .mw-rcfilters-container .mw-rcfilters-ui-filterTagMultiselectWidget-wrapper-content-title {
 	color: var(--faux-white);

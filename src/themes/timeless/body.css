@@ -297,5 +297,5 @@ pre:not(.mw-highlight pre) {
 
 /*! ⏸️ fix white background when zoomed in */
 #mw-content-block {
-	background-color: rgba(0, 0, 0, 0);
+	background-color: transparent;
 }
