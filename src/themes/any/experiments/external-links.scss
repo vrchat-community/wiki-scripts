@@ -22,7 +22,7 @@ $origins: (
 	"web.archive.org" "Archive"
 );
 
-@each $origin
+@each $originVRChat
 	in (
 		"ask.vrchat.com",
 		"creators.vrchat.com",
@@ -38,7 +38,11 @@ $origins: (
 		"vrchat.com"
 	)
 {
-	$origins: list.append($origins, ($origin "VRChat"), comma);
+	$origins: list.append($origins, ($originVRChat "VRChat"), comma);
+}
+
+@each $originDiscord in ("wiki.vrchat.com/discord") {
+	$origins: list.append($origins, ($originDiscord "Discord"), comma);
 }
 
 .mw-parser-output a.external,
