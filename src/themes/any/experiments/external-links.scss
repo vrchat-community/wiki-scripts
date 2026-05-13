@@ -22,21 +22,27 @@ $origins: (
 	"web.archive.org" "Archive"
 );
 
-@each $origin
+@each $originVRChat
 	in (
 		"ask.vrchat.com",
 		"creators.vrchat.com",
+		"clientsim.docs.vrchat.com",
 		"docs.vrchat.com",
 		"feedback.vrchat.com",
 		"hello.vrchat.com",
 		"help.vrchat.com",
-		"medium.com/vrchat",
-		"medium.com/@vrchat",
+		"status.vrchat.com",
+		"udonsharp.docs.vrchat.com",
+		"vcc.docs.vrchat.com",
 		"vrch.at",
 		"vrchat.com"
 	)
 {
-	$origins: list.append($origins, ($origin "VRChat"), comma);
+	$origins: list.append($origins, ($originVRChat "VRChat"), comma);
+}
+
+@each $originDiscord in ("wiki.vrchat.com/discord") {
+	$origins: list.append($origins, ($originDiscord "Discord"), comma);
 }
 
 .mw-parser-output a.external,

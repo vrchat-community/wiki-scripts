@@ -3,9 +3,10 @@
 	cursor: grab;
 	transform-origin: bottom center;
 	transition: transform 0.1s ease;
+}
 
-	:active {
-		cursor: grabbing;
-		transform: scaleY(0.9) scaleX(1.1);
-	}
+[alt*="vrcat" i]:active,
+[alt*="vrrat" i]:active {
+	cursor: grabbing;
+	transform: scaleY(0.9) scaleX(1.1);
 }

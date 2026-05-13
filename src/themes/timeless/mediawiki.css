@@ -239,10 +239,51 @@
 
 /* 😺 recent changes index legend */
 .mw-body .mw-rcfilters-ui-changesListWrapperWidget .mw-changeslist-legend {
-	background: var(--less-dark-green);
-	border: solid var(--less-dark-green-border);
+	background: var(--less-dark-grey);
+	border: solid var(--less-dark-grey-border);
 	color: var(--faux-white);
 	box-shadow: 0 0 0.4rem #000;
+}
+/* ⏸️ misc recent changes fixes */
+.mw-changeslist-legend {
+	background-color: var(--less-dark-grey);
+	border: 3px solid var(--less-dark-grey-border);
+	border-radius: 15px;
+	color: var(--faux-white);
+	box-shadow: 0 0 0.4rem #000;
+}
+.mw-rcfilters-container
+	.mw-rcfilters-ui-filterTagMultiselectWidget.oo-ui-widget-enabled
+	.oo-ui-tagMultiselectWidget-handle {
+	background-color: var(--less-dark-grey);
+	border: 3px solid var(--less-dark-grey-border);
+	border-radius: 15px;
+}
+.oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined {
+	background-color: transparent;
+}
+.mw-rcfilters-container .mw-rcfilters-ui-filterTagMultiselectWidget-wrapper-content-title {
+	color: var(--faux-white);
+}
+.mw-rcfilters-container .mw-rcfilters-ui-filterTagMultiselectWidget-wrapper-content-savedQueryTitle {
+	color: rgb(230, 230, 230);
+}
+.mw-rcfilters-collapsed .mw-rcfilters-container .mw-rcfilters-ui-filterTagMultiselectWidget {
+	border-bottom: none;
+}
+.mw-rcfilters-ui-filterTagMultiselectWidget-views {
+	padding-top: 1em;
+}
+.mw-rcfilters-container .mw-rcfilters-ui-filterTagMultiselectWidget-views-input {
+	padding-right: 10px;
+}
+.mw-rcfilters-container .mw-rcfilters-ui-filterTagMultiselectWidget .oo-ui-tagMultiselectWidget-input input {
+	border-radius: 10px;
+}
+.mw-rcfilters-container .mw-rcfilters-ui-filterTagMultiselectWidget-views-select-widget.oo-ui-widget {
+	background: var(--more-dark-grey);
+	border: 2px solid var(--more-dark-grey-border);
+	border-radius: 10px;
 }
 
 /* 😺 recent changes mark-as-seen button fix */
@@ -296,4 +337,9 @@
 .oo-ui-messageWidget.oo-ui-messageWidget-block.oo-ui-flaggedElement-notice {
 	background: var(--very-dark-grey);
 	border-color: var(--very-dark-grey-border);
+}
+
+/* ⏸️ notice noti background fix */
+.mw-echo-ui-notificationItemWidget-initiallyUnseen {
+	background-color: #382f00 !important;
 }

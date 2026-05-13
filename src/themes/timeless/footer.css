@@ -7,6 +7,12 @@
 		background-repeat: no-repeat; */
 }
 
+/* ⏸️ footer border color */
+#mw-content-container {
+	/*! border-bottom: solid 4px var(--ns-current-color); | adapts to namespace color */
+	border-bottom: solid 4px var(--link);
+}
+
 /* 😺 FIGURE OUT POTENTIALLY HAVING CUSTOM IMAGES IN THE FOOTER LATER
 	.mw-footer-container::after {
 		background: linear-gradient(120deg, transparent 20%, #1a1d1c 30%);

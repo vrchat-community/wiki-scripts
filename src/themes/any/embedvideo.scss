@@ -1,9 +1,32 @@
 .embedvideo-thumbnail > p {
 	margin: 0;
 }
-
 .embedvideo-thumbnail__image {
 	position: absolute;
 	width: 100%;
 	height: 100%;
+}
+.embedvideo-privacyNotice__dismiss {
+	color: var(--red);
+	background: var(--less-dark-grey);
+	border: solid var(--less-dark-grey-border);
+	border-radius: 10px;
+}
+.embedvideo-privacyNotice__continue {
+	background: var(--less-dark-grey);
+	color: var(--faux-white);
+	border: solid var(--less-dark-grey-border);
+	border-radius: 10px;
+}
+.embedvideo-privacyNotice__continue:hover {
+	background: var(--green);
+	color: var(--faux-white);
+}
+.embedvideo-privacyNotice__dismiss:hover {
+	background: var(--red);
+	color: var(--faux-white);
+}
+.embedvideo-loader__fakeButton {
+	background: var(--less-dark-grey);
+	color: var(--faux-white);
 }

@@ -32,12 +32,15 @@
 
 /* 😺 searchbar theming and adjustments */
 #simpleSearch {
-	background: var(--less-dark-grey);
-	border: solid 2px #39404a;
+	border: 3px solid #39404a;
+	border-radius: 8px;
+	height: 38px;
+	box-shadow: 0 0 0.4rem #000;
 }
 
 #searchInput {
 	color: #fff;
+	height: 2.3em;
 }
 
 #p-search {
@@ -58,6 +61,7 @@ input#searchButton,
 #mw-searchButton {
 	filter: invert(1);
 	right: 0.5em;
+	height: 3em;
 }
 
 /* 😺 account box theming and adjustments */
@@ -121,8 +125,9 @@ input#searchButton,
 
 /* 😺 dropdown theming */
 #personal .dropdown {
-	background: var(--very-dark-grey);
+	background: #16191c;
 	border: solid var(--very-dark-grey-border);
+	border-radius: 8px;
 }
 #pt-uls .uls-trigger::before {
 	filter: invert(1);
@@ -136,4 +141,12 @@ input#searchButton,
 #personal .dropdown::after {
 	border-bottom-color: #252e34;
 	top: -10px;
+}
+
+/* ⏸️ hacky | center dropdown under account name */
+@media screen and (min-width: 1100px) {
+	#personal .dropdown {
+		top: 3em;
+		right: -5em;
+	}
 }

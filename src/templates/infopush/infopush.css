@@ -13,7 +13,8 @@
 	transform: translateX(0%);
 }
 
-.tpl-infopush-item, .tpl-infopush-item p {
+.tpl-infopush-item,
+.tpl-infopush-item p {
 	margin: 0;
 	display: contents;
 }

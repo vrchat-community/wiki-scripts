@@ -273,3 +273,8 @@ body
 .ve-ui-expandableContent-toggle {
 	background-color: unset;
 }
+
+/* ⏸️ "are you sure?" color */
+.oo-ui-messageDialog-title {
+	color: white;
+}

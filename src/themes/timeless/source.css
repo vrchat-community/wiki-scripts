@@ -31,3 +31,29 @@ div.editOptions {
 		filter: invert(1);
 	}
 	*/
+
+/*! ⏸️  mimic style of caution noticebox when in source editor */
+body.action-edit:not(.ve-activated) .cdx-message--warning,
+body.action-submit:not(.ve-activated) .cdx-message--warning {
+	background-color: var(--background-color-warning-subtle, #202114);
+	border: solid 3px #9e8600 !important;
+	color: white;
+	border-radius: 10px;
+}
+
+/*! ⏸️ "special characters & help" improved readability */
+.wikiEditor-ui-toolbar .page-characters div span {
+	color: white;
+}
+.wikiEditor-ui-toolbar .page-characters div span:hover {
+	color: black;
+}
+.wikiEditor-ui-toolbar .booklet > .index > div:hover {
+	color: black;
+}
+.wikiEditor-ui-toolbar .page-table td {
+	color: white;
+}
+.wikiEditor-ui-toolbar .page-table th {
+	color: #a4a4a4;
+}
