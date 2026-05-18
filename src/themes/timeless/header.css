@@ -36,6 +36,7 @@
 	border-radius: 8px;
 	height: 38px;
 	box-shadow: 0 0 0.4rem #000;
+	background: var(--less-dark-grey);
 }
 
 #searchInput {
