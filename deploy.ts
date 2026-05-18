@@ -44,10 +44,7 @@ function buildSummary(): string {
 
 	const parts = commits.map((commit) => {
 		const subject = commit.message.split("\n")[0]!.trim();
-		const author = commit.author.username
-			? `[https://github.com/${commit.author.username} ${commit.author.name}]`
-			: commit.author.name;
-		return `[${commit.url} ${commit.id.slice(0, 7)}] ${author}: ${subject}`;
+		return `${subject} (${commit.url})`;
 	});
 
 	const summary = parts.join("; ");
