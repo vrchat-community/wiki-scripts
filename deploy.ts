@@ -57,7 +57,19 @@ function buildSummary(): string {
 
 const summary = buildSummary();
 
-const session = new Session(
+class VRChatWikiSession extends Session {
+	public getFetchOptions({ headers, ...fetchOptions }: any) {
+		return super.getFetchOptions({
+			...fetchOptions,
+			headers: {
+				...headers,
+				"x-vrc-waf-pls-let-me-in": env.BYPASS_TOKEN
+			}
+		});
+	}
+}
+
+const session = new VRChatWikiSession(
 	"https://wiki.vrchat.com/api.php",
 	{ formatversion: 2, errorformat: "plaintext" },
 	{ userAgent: "wiki.vrchat.com upload (https://github.com/vrchat-community/wiki-scripts)" }
